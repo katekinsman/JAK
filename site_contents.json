@@ -1,0 +1,16 @@
+{
+	"navigation": {
+        "teacher": "Teacher",
+		"student": "Student"
+	},
+    "teacher": {
+        "students": "Students",
+        "class": "Class Statistics",
+        "pastclass": "Past Classes",
+        "configure": "Configure"
+    },
+    "student": {
+        "play": "Play",
+        "avatar": "My Avatar"
+    }
+}
