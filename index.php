@@ -2,9 +2,14 @@
     $cur_page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 'login';
     $nav = json_decode(file_get_contents("site_contents.json"), true);
     $user = isset($_REQUEST['user']) ? $_REQUEST['user'] : $cur_page;
-    $pageheader = $cur_page == 'login' ? 'Welcome!' : $cur_page == 'teacher' || $cur_page == 'student' ?
-    $cur_page : $nav[$user][$cur_page];
-    $pagetitle =($cur_page == 'login' ? 'Login' : "JAK - $pageheader");
+    $pageheader = if($cur_page == 'login') {
+        'Welcome!'; 
+    } else if ($cur_page == 'teacher' || $cur_page == 'student') {
+        $cur_page;
+     else {
+        $nav[$user][$cur_page];
+    }
+    $pagetitle = if($cur_page == 'login' ? 'Login' : "JAK - $pageheader");
 ?>
 
 <!DOCTYPE html>
@@ -26,21 +31,32 @@
     <header>
         <div class="logocontainer"><a href="index.php" class="logo"></a></div>
         <nav>
-            <?php $cur_page == 'login' ?
+            <?php if($cur_page == 'login') {
                 foreach ($nav['navigation'] as $pageid => $title) { ?>
-                <button <?= $cur_page == $pageid ? 'class="current"' : ''; ?> >
+                <button <if ($cur_page == $pageid) {
+                            'class="current"';
+                        }
+                            else {
+                            ''; 
+                        } ?> >
                     <a href="/index.php?page=<?= $pageid ?>"><?= $title ?></a>
                 </button>
-            <?php } : '' ?>
+            <?php }} else {
+                '' 
+            }?>
 
-            <?php $user == 'teacher' || $user == 'student' ? ?>
+            <?php if($user == 'teacher' || $user == 'student') { ?>
                 <ul>
                 <?php foreach ($nav[$user] as $pageid => $title) { ?>
-                    <li <?= $cur_page == $pageid ? 'class="current"' : ''; ?> >
+                    <li <if($cur_page == $pageid) {
+                            'class="current"';
+                        } else {
+                            ''; 
+                        }?> >
                         <a href="/index.php?user=<?= $user ?>page=<?= $pageid ?>"><?= $title ?></a>
                     </li>
-                <?php }
-            : '' ?>
+                <?php }} else {
+                    '' } ?>
                 </ul>
         </nav>
     </header>
