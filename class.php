@@ -1,0 +1,1 @@
+<p>Whooohooo! This is the class statistics page!</p>

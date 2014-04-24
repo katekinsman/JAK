@@ -1,0 +1,1 @@
+<p>Bravo! This is the student's home screen!</p>

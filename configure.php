@@ -1,0 +1,1 @@
+<p>I help you configure your classes and students.</p>
