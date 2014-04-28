@@ -9,7 +9,10 @@
      else {
         $nav[$user][$cur_page];
     }
-    $pagetitle = if($cur_page == 'login' ? 'Login' : "JAK - $pageheader");
+    $pagetitle = if($cur_page == 'login') {
+        'Login';
+        else {
+        "JAK - $pageheader"};
 ?>
 
 <!DOCTYPE html>
