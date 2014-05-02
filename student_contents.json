@@ -1,6 +1,8 @@
 {
 	"student": {
         "play.php": "Play",
-        "avatar.php": "My Avatar"
+        "store.php": "Store",
+	    "avatar.php": "My Avatar",
+	    "inclass.php": "In-Class Rewards"
     }
 }

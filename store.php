@@ -1,0 +1,1 @@
+<p>Buy stuff with your coins here!</p>
