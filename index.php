@@ -65,7 +65,7 @@
                         } else {
                             ''; 
                         }?> >
-                        <a href="/index.php?user=<?= $user ?>page=<?= $pageid ?>"><?= $title ?></a>
+                        <a href="/index.php?user=<?= $user ?>?page=<?= $pageid ?>"><?= $title ?></a>
                     </li>
                 <?php }} else {
                     '' } ?>

@@ -1,8 +1,8 @@
 { 
 	"teacher": {
-	    "students.php": "Students",
-	    "class.php": "Class Statistics",
-	    "pastclass.php": "Past Classes",
-	    "configure.php": "Configure"
+	    "students": "Students",
+	    "class": "Class Statistics",
+	    "pastclass": "Past Classes",
+	    "configure": "Configure"
 	}
 }

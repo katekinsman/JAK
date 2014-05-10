@@ -1,7 +1,6 @@
 <?php
     $cur_page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 'Teacher';
     $nav = json_decode(file_get_contents("teacher_contents.json"), true);
-    $user = isset($_REQUEST['user']) ? $_REQUEST['user'] : $cur_page;
     $pageheader = $cur_page;
     $pagetitle = 'Teacher Page';
 ?>
@@ -38,7 +37,7 @@
 				<ul id="nav">
 					<?php foreach ($nav['teacher'] as $pageid => $title) { ?>
 						<li <?= $cur_page == $pageid ? 'class="current"' : ''; ?>>
-							<a href="<?= $BASE_URL ?>/<?= $pageid ?>/"><?= $title ?></a>
+							<a href="<?= $BASE_URL ?>?page=<?= $pageid ?>"><?= $title ?></a>
 						</li>
 					<?php } ?>
 				</ul>
