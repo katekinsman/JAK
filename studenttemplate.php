@@ -1,59 +1,67 @@
 <?php
-    $cur_page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 'Student';
-    $nav = json_decode(file_get_contents("student_contents.json"), true);
+    $cur_page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 'student';
+    $nav = json_decode(file_get_contents("site_contents.json"), true);
     $pageheader = $cur_page;
     $pagetitle = 'Student Page';
 ?>
 
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap.min.css">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap-theme.min.css">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <link href="capstone.css" rel="stylesheet" type="text/css">
 
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="responsiveslides.min.js"></script>
+        <title><?= $pagetitle ?></title>
+    </head>
 
-    <link href="capstone.css" rel="stylesheet" type="text/css">
+    <body>
+        <div id="content">
+            <!-- Begin contents of the page, to be loaded dynamically -->
+                <nav>
+                    <ul id="nav">
+                        <?php foreach ($nav['student'] as $pageid => $title) { ?>
+                            <li <?= $cur_page == $pageid ? 'class="current"' : ''; ?>>
+                                <a href="studenttemplate.php?page=<?= $pageid ?>"><?= $title ?></a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </nav>
 
-    <title><?= $pagetitle ?></title>
+            <?php
+                global $cur_page;
+                $key = array_search($pageheader, $nav);
+                include "$cur_page.php";
+            ?>
+            <!-- End dynamic content -->
+        </div>
+        <div id="push"></div>
+        <div id="footer">
+              <footer><p>JAK Capstone</p></footer>
+        </div>
 
-</head>
-<body>
-    <div id="content">
-        <?= $headeritem ?>
-        <!-- Begin contents of the page, to be loaded dynamically -->
-			<nav>
-				<ul id="nav">
-					<?php foreach ($nav['student'] as $pageid => $title) { ?>
-						<li <?= $cur_page == $pageid ? 'class="current"' : ''; ?>>
-							<a href="studenttemplate.php?page=<?= $pageid ?>"><?= $title ?></a>
-						</li>
-					<?php } ?>
-				</ul>
-			</nav>
 
-        <?php
-            global $cur_page;
-            $key = array_search($pageheader, $nav);
-            include "$cur_page.php";
-        ?>
-        <!-- End dynamic content -->
-    </div>
-    <div id="push"></div>
-    <div id="footer">
-        <footer><p>JAK Capstone</p></footer>
-    </div>
-</body>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+        <script>
+            $('#storeTab a').click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            })
+
+            $('.carousel').carousel()
+        </script>
+    </body>
+
 
 </html>

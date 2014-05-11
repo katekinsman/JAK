@@ -1,0 +1,15 @@
+.panel{
+    margin: 3em;
+}
+#storeTab.panel{
+    margin-left: 5em;
+}
+table{
+    padding: 2em;
+}
+button{
+    margin: auto;
+}
+footer{
+    text-align: center;
+}
