@@ -11,6 +11,8 @@
     },
     "student": {
         "play": "Play",
-        "avatar": "My Avatar"
+        "avatar": "My Avatar",
+        "store": "Store"
     }
+
 }
