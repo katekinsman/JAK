@@ -26,8 +26,9 @@
     <body>
         <div id="content">
             <!-- Begin contents of the page, to be loaded dynamically -->
-                <nav>
-                    <ul id="nav">
+                <nav class="navbar navbar-default" role="navigation">
+                    <a class="navbar-brand" href="http://jakcapstone.azurewebsites.net/">SmartAdventure</a>
+                    <ul class="nav navbar-nav" id="nav">
                         <?php foreach ($nav['student'] as $pageid => $title) { ?>
                             <li <?= $cur_page == $pageid ? 'class="current"' : ''; ?>>
                                 <a href="studenttemplate.php?page=<?= $pageid ?>"><?= $title ?></a>

@@ -1,10 +1,10 @@
 <div class="panel panel-default">
   <div class="panel-body">
-    
-	<div id="myCarousel" class="carousel slide" data-interval="false">
+   
+	<div id="myCarousel" class="carousel" data-interval="false">
 
 	  <!-- Carousel items -->
-	  <div class="carousel-inner">
+	  <div class="carousel-inner" style="padding:150px;">
 	    <div class="active item">
 	    	<div class="panel panel-default">
 		    	<h1>Story Title</h1>
@@ -89,6 +89,8 @@
 				</form>
 		    </div>
 		</div>
+		
+		<p align="center"><a href="/studenttemplate.php"><button type="button" class="btn btn-default">Home</button></a></p>
 
 	  </div>
 	  <!-- Carousel nav -->
@@ -97,7 +99,9 @@
     </a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
-	</div>
+	</a>
+</div>
+
 
   </div>
 </div>

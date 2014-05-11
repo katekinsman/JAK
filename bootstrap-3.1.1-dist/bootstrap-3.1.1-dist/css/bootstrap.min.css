@@ -4,10 +4,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-.carousel {
-	padding: 150px;
-}
-
 .carousel-control.left, .carousel-control.right {
     background-image: none;
 }
