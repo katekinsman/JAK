@@ -1,11 +1,11 @@
 <div class="panel panel-default">
   <div class="panel-body">
 
-  	<h2>You have # coins!</h2>
-	<img src="http://www.clipartbest.com/cliparts/nTB/X6B/nTBX6BETA.gif" height="5%" width="5%">
-	<h3>Inventory</h3>
+  	<div style="float:left; text-align:center;"><h1>My Avatar</h1>
+	<img src="http://www.clipartbest.com/cliparts/nTB/X6B/nTBX6BETA.gif" height="30%" width="30%">
+	<h2>Your have # coins!</h2></div>
     
-	<div id="myCarousel" class="carousel" data-interval="false">
+	<div id="myCarousel" class="carousel" style="float:right; display:inline;" data-interval="false">
 
 	  <!-- Carousel items -->
 	<div class="carousel-inner">
@@ -102,8 +102,6 @@
                 </tr>
             </table>
 		</div>
-
-		<p align="center"><a href="/studenttemplate.php"><button type="button" class="btn btn-default">Home</button></a></p>
 
 	  </div>
 	  <!-- Carousel nav -->
