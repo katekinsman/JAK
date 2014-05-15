@@ -23,8 +23,9 @@
         <title><?= $pagetitle ?></title>
     </head>
 
-    <body>
+    <body>            
         <div id="content">
+
             <!-- Begin contents of the page, to be loaded dynamically -->
                 <nav class="navbar navbar-default" role="navigation">
                     <a class="navbar-brand" href="http://jakcapstone.azurewebsites.net/">SmartAdventure</a>

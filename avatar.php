@@ -1,11 +1,13 @@
 <div class="panel panel-default">
   <div class="panel-body">
 
-  	<div style="float:left; text-align:center;"><h1>My Avatar</h1>
-	<img src="http://www.clipartbest.com/cliparts/nTB/X6B/nTBX6BETA.gif" height="30%" width="30%">
-	<h2>Your have # coins!</h2></div>
+  	<div style="text-align:center; overflow:auto; float:left; width:40%;">
+  		<h1>My Avatar</h1>
+		<img src="http://www.clipartbest.com/cliparts/nTB/X6B/nTBX6BETA.gif" height="10%" width="10%">
+		<h2>Your have # coins!</h2>
+	</div>
     
-	<div id="myCarousel" class="carousel" style="float:right; display:inline;" data-interval="false">
+	<div id="myCarousel" class="carousel" style="float:right; width:60%" data-interval="false">
 
 	  <!-- Carousel items -->
 	<div class="carousel-inner">
