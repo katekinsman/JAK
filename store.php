@@ -10,7 +10,7 @@
         <div class="tab-content">
 
             <div class="tab-pane active" id="in-game">
-                <div id="in-game-carousel" class="carousel slide">
+                <div id="in-game-carousel" class="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#in-game-carousel" data-slide-to="0" class="active"></li>
@@ -96,7 +96,7 @@
             </div>
 
             <div class="tab-pane" id="in-class">
-                <div id="in-class-carousel" class="carousel slide">
+                <div id="in-class-carousel" class="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#in-class-carousel" data-slide-to="0" class="active"></li>

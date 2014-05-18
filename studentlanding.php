@@ -17,9 +17,9 @@
     	<div class="jumbotron" style="text-align:center;">
     		<h1>What Would You Like To Do?</h1>
 			<div class="btn-group-vertical btn-group-lg">
-				<button type="button" class="btn btn-default"><a href="/studenttemplate.php?page=play">Play</a></button>
-			  	<button type="button" class="btn btn-default"><a href="/studenttemplate.php?page=avatar">My Avatar</a></button>
-			 	<button type="button" class="btn btn-default"><a href="/studenttemplate.php?page=store">Store</a></button>
+				<a href="/studenttemplate.php?page=theme"><button type="button" class="btn btn-default btn-lg">Play</button></a>
+			  	<a href="/studenttemplate.php?page=avatar"><button type="button" class="btn btn-default btn-lg">My Avatar</button></a>
+			 	<a href="/studenttemplate.php?page=store"><button type="button" class="btn btn-default btn-lg">Store</button></a>
 			</div>
 		</div>
 	</body>

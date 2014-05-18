@@ -1,8 +1,19 @@
 <?php
+
     $cur_page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 'student';
     $nav = json_decode(file_get_contents("site_contents.json"), true);
     $pageheader = $cur_page;
     $pagetitle = 'Student Page';
+
+    // MySQl Connection
+
+    $username = 'b23933fcb8ccea';
+    $password = '8471ac64';
+    $hostname = 'us-cdbr-azure-east-a.cloudapp.net:3306'; 
+    $database = 'capstonemysql';
+
+    $db = new PDO("mysql:dbname=$database;host=$hostname", $username, $password);
+
 ?>
 
 <!DOCTYPE html>
@@ -62,6 +73,58 @@
 
             $('.carousel').carousel()
         </script>
+
+        <!-- Rainforest theme -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#rainforest").click(function() {
+                    $.ajax('selecttheme.php', {  
+                        success: testMe,
+                        error: ajaxError,
+                        data: {action: 'rainforest'}
+                    });
+                });
+            });
+
+            function testMe(data) {
+                alert("I work yay!");
+            }
+        </script>
+
+        <!-- Castle theme
+        <script type="text/javascript">
+            $(document).ready(function() {
+              $("#castle").click(function() {
+                alert("castle");
+               });
+            });
+        </script> -->
+
+        <!-- Pirate theme -->
+
+        <script type="text/javascript">
+            function ajaxError(jqxhr, type, error) {
+              var msg = "An Ajax error occurred!\n\n";
+              if (type == 'error') {
+                if (jqxhr.readyState == 0) {
+                  // Request was never made - security block?
+                  msg += "Looks like the browser security-blocked the request.";
+                } else {
+                  // Probably an HTTP error.
+                  msg += 'Error code: ' + jqxhr.status + "\n" + 
+                         'Error text: ' + error + "\n" + 
+                         'Full content of response: \n\n' + jqxhr.responseText;
+                }
+              } else {
+                msg += 'Error type: ' + type;
+                if (error != "") {
+                  msg += "\nError text: " + error;
+                }
+              }
+              alert(msg);
+            }
+        </script>
+
     </body>
 
 </html>
