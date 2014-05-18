@@ -1,6 +1,6 @@
 <?php 
 
-	// Use this page to store variables for the various themes
+	// Use this page to store variables in PHP for the various themes as part of AJAX request
 
 	switch ($_REQUEST['action']) {
 		

@@ -59,13 +59,20 @@
 				    	<p><?php print $result4[0]; ?></p>
 				    </div>
 				</div>
+				<!-- To do: figure out how to foreach through the radio buttons with possible answers -->
 				<div class="item">
 			    	<div class="panel panel-default">
 				    	<h1>Question One</h1>
 				    	<?php 
 						    $rows5 = $db->query("SELECT Question FROM question WHERE idQuestion='$q1'");
-						    $result5 = $rows5->fetch(PDO::FETCH_BOTH); ?>
+				    		$result5 = $rows5->fetch(PDO::FETCH_BOTH); ?>
 				    	<p><?php print $result5[0]; ?></p>
+				    	<form>
+				    		<?php $opt1 = $db->query("SELECT AnswerValue FROM option WHERE idQuestion='$q1'"); ?>
+				    		<?php foreach ($opt1 as $row) { ?>
+								<input type="radio" name="option" value="1"><?php $row["AnswerValue"]; ?> <br>
+							  <?php } ?>
+				    	</form>
 				    </div>
 				</div>
 				<div class="item">

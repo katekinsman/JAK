@@ -1,3 +1,5 @@
+<!-- This page let's the user select which theme they would like to use -->
+
 <div class="jumbotron" style="text-align:center;">
 	<p>What theme would you like?</p>
 	<a href="/studenttemplate.php?page=play"><button type="button" name="rainforest" class="btn btn-default btn-lg" id="rainforest" value="rainforest">Rainforest</button></a>
