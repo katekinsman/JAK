@@ -1,0 +1,8 @@
+{ 
+	"teacher": {
+	    "students": "Students",
+	    "class": "Class Statistics",
+	    "pastclass": "Past Classes",
+	    "configure": "Configure"
+	}
+}
