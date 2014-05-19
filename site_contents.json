@@ -10,7 +10,7 @@
         "configure": "Configure"
     },
     "student": {
-        "play": "Play",
+        "theme": "Play",
         "avatar": "My Avatar",
         "store": "Store"
     }

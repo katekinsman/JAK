@@ -1,8 +1,19 @@
 <?php
+
     $cur_page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 'student';
     $nav = json_decode(file_get_contents("site_contents.json"), true);
     $pageheader = $cur_page;
     $pagetitle = 'Student Page';
+
+    // MySQl Connection
+
+    $username = 'b23933fcb8ccea';
+    $password = '8471ac64';
+    $hostname = 'us-cdbr-azure-east-a.cloudapp.net:3306'; 
+    $database = 'capstonemysql';
+
+    $db = new PDO("mysql:dbname=$database;host=$hostname", $username, $password);
+
 ?>
 
 <!DOCTYPE html>
@@ -20,14 +31,23 @@
 
         <link href="capstone.css" rel="stylesheet" type="text/css">
 
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+        <!-- Javascript file for ajax requests -->
+        <script src="ajax.js"></script>
+
         <title><?= $pagetitle ?></title>
     </head>
 
-    <body>
+    <body>            
         <div id="content">
+
             <!-- Begin contents of the page, to be loaded dynamically -->
-                <nav>
-                    <ul id="nav">
+                <nav class="navbar navbar-default" role="navigation">
+                    <a class="navbar-brand" href="http://jakcapstone.azurewebsites.net/">SmartAdventure</a>
+                    <ul class="nav navbar-nav" id="nav">
                         <?php foreach ($nav['student'] as $pageid => $title) { ?>
                             <li <?= $cur_page == $pageid ? 'class="current"' : ''; ?>>
                                 <a href="studenttemplate.php?page=<?= $pageid ?>"><?= $title ?></a>
@@ -45,23 +65,18 @@
         </div>
         <div id="push"></div>
         <div id="footer">
-              <footer><p>JAK Capstone</p></footer>
+            <footer><p>JAK Capstone</p></footer>
         </div>
 
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
-        <script>
+        <script type="text/javascript">
             $('#storeTab a').click(function (e) {
                 e.preventDefault();
                 $(this).tab('show');
             })
 
-            $('.carousel').carousel()
+            $('.carousel').carousel();
         </script>
-    </body>
 
+    </body>
 
 </html>
