@@ -2,7 +2,7 @@
 
 	// Use this page to store variables in PHP for the various themes as part of AJAX request
 
-	switch ($_REQUEST['action']) {
+	switch ($_REQUEST['theme']) {
 		
 		//Rainforest theme
 
