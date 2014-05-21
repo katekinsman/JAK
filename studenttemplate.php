@@ -14,6 +14,7 @@
 
     $db = new PDO("mysql:dbname=$database;host=$hostname", $username, $password);
 
+    $theme = '';
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +37,6 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
         <!-- Javascript file for ajax requests -->
-        <script src="ajax.js"></script>
 
         <title><?= $pagetitle ?></title>
     </head>
