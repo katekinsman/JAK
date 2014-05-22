@@ -20,130 +20,54 @@
     </div>
 </div>
 
+
 <div class="panel panel-default">
 	<div class="panel-body">
-   
 		<div id="myCarousel" class="carousel" data-interval="false">
 			  <!-- Carousel items -->
             <div class="carousel-inner">
-			    <div class="active item">
-			    	<div class="panel panel-default">
-			    		<?php global $theme;
-                            $theme = $_REQUEST['theme'];
-						    $rows = $db->query("SELECT title FROM story WHERE idStory='$theme'");
-						    $result = $rows->fetch(PDO::FETCH_BOTH); ?>
-				    	<h1><?php print $result[0]; ?></h1>
-				    	<?php 
-						    $rows2 = $db->query("SELECT Content FROM page WHERE idPage='1'"); //TODO: joins
-						    $result2 = $rows2->fetch(PDO::FETCH_BOTH); ?>
-				    	<p><?php print $result2[0]; ?></p>
-			    	</div>
-		    	</div>
-                <?php
-                    $numPages = $db->query("SELECT COUNT(idPage) FROM $theme"); //TODO: joins
-                    $insertPage = 2;
-                    while($insertPage <= $numPages){ ?>
-                        <div class="item">
-                            <div class="panel panel-default">
-                                <h1>Page <?= $insertPage ?></h1>
-                                <?php
-                                    $rows2 = $db->query("SELECT Content FROM page WHERE idPage='$insertPage'");
-                                    $result2 = $rows2->fetch(PDO::FETCH_BOTH); ?>
-                                <p><?php print $result2[0]; ?></p>
-                            </div>
+                <div class="active item">
+                    <div class="panel panel-default">
+                        <!--title-->
+                        <?php global $theme;
+                        $theme = $_REQUEST['theme'];
+                        $rows = $db->query("SELECT DISTINCT Title FROM `vw_fullstory` WHERE theme='$theme'");
+                        $result = $rows->fetch(PDO::FETCH_BOTH); ?>
+                        <h1><?php print $result[0]; ?></h1>
+                    </div>
+                </div>
+
+                <!--pages -->
+                <?php $findPages = "SELECT Content, ImagePath, ImageDesc FROM `vw_fullstory` WHERE theme='$theme' ORDER BY PageNum";
+                foreach ($db->query($findPages) as $pages) { ?>
+                    <div class="item">
+                        <div class="panel panel-default">
+                            <p><?php print $pages['Content']; ?></p>
+                            <img alt="<?=$pages['ImageDesc']?>" src="<?=$pages['ImagePath']?>" />
                         </div>
-                        <?php  $insertPage++;
-                    }
-                ?>
-			    <!--<div class="item">
-			    	<div class="panel panel-default">
-					    <h1>Page Two</h1>
-				    	<?php /*
-						    $rows3 = $db->query("SELECT Content FROM page WHERE idPage='$pagetwo'");
-						    $result3 = $rows3->fetch(PDO::FETCH_BOTH); */?>
-				    	<p><?php /*print $result3[0]; */?></p>
-			    	</div>
-			    </div>
-			    <div class="item">
-			    	<div class="panel panel-default">
-				    	<h1>Page Two</h1>
-				    	<?php /*
-						    $rows4 = $db->query("SELECT Content FROM page WHERE idPage='$pagethree'");
-						    $result4 = $rows4->fetch(PDO::FETCH_BOTH); */?>
-				    	<p><?php /*print $result4[0]; */?></p>
-				    </div>
-				</div>-->
+                    </div>
+                <?php } ?>
+
 				<!-- TODO: figure out how to foreach through the radio buttons with possible answers -->
 
-                <?php
-                    $numQuestions = $db->query("SELECT COUNT(idQuestion) FROM $theme"); //TODO: joins
-                    $insertQuestion = 1;
-                    while($insertQuestion <= $numQuestions){ ?>
-                        <div class="item">
-                            <div class="panel panel-default">
-                                <h1>Page <?=$insertQuestion?></h1>
-                                <?php
-                                    //TODO: is the rows and results variables being the same as the story rows and results variables significant?
-                                    $rows2 = $db->query("SELECT Question FROM question WHERE idQuestion='$insertQuestion'"); //TODO: joins
-                                    $result2 = $rows2->fetch(PDO::FETCH_BOTH);?>
-                                <p><?php print $result2[0]; ?></p>
-                                <form>
-                                    <?php $opt1 = $db->query("SELECT AnswerValue FROM option WHERE idQuestion='$insertQuestion'"); //TODO: joins
-                                    foreach ($opt1 as $row) { ?>
-                                        <input type="radio" name="option" value="1"><?php $row["AnswerValue"]; ?> <br>
-                                    <?php } ?>
-                                </form>
-                            </div>
+                <!-- Questions -->
+                <?php $findQuestions = "SELECT DISTINCT Question FROM `vw_fullassessment` WHERE theme='$theme' ORDER BY RAND()";
+                foreach ($db->query($findQuestions) as $questions) {
+                    $q = $questions['Question']?>
+                    <div class="item">
+                        <div class="panel panel-default">
+                            <p><?php print $q; ?></p>
+                            <!-- answer options -->
+                            <form>
+                                <?php $opt = "SELECT AnswerValue, Correct FROM `vw_fullassessment` WHERE Question='$q' ORDER BY RAND()";
+                                foreach ($db->query($opt) as $row) { ?>
+                                    <input type="radio" name="option" value="<?=$row['Correct']?>"><?php print $row['AnswerValue']; ?> <br>
+                                <?php } ?>
+                            </form>
                         </div>
-                        <?php $insertQuestion++;
-                    }
-                ?>
+                    </div>
+                <?php } ?>
 
-                <div class="item">
-			    	<div class="panel panel-default">
-				    	<h1>Question One</h1>
-				    	<?php 
-						    $rows5 = $db->query("SELECT Question FROM question WHERE idQuestion='$q1'");
-				    		$result5 = $rows5->fetch(PDO::FETCH_BOTH); ?>
-				    	<p><?php print $result5[0]; ?></p>
-				    	<form>
-				    		<?php $opt1 = $db->query("SELECT AnswerValue FROM option WHERE idQuestion='$q1'"); ?>
-				    		<?php foreach ($opt1 as $row) { ?>
-								<input type="radio" name="option" value="1"><?php $row["AnswerValue"]; ?> <br>
-							  <?php } ?>
-				    	</form>
-				    </div>
-				</div>
-				<div class="item">
-			    	<div class="panel panel-default">
-				    	<h1>Question Two</h1>
-				    	<?php 
-						    $rows6 = $db->query("SELECT Question FROM question WHERE idQuestion='$q2'");
-						    $result6 = $rows6->fetch(PDO::FETCH_BOTH); ?>
-				    	<p><?php print $result6[0]; ?></p>
-				    	<form>
-							<input type="radio" name="option" value="1">One<br>
-							<input type="radio" name="option" value="2">Two<br>
-							<input type="radio" name="option" value="3">Three<br>
-							<input type="radio" name="option" value="4">Four
-						</form>
-				    </div>
-				</div>
-				<div class="item">
-			    	<div class="panel panel-default">
-				    	<h1>Question Three</h1>
-				    	<?php 
-						    $rows7 = $db->query("SELECT Question FROM question WHERE idQuestion='$q3'");
-						    $result7 = $rows7->fetch(PDO::FETCH_BOTH); ?>
-				    	<p><?php print $result7[0]; ?></p>
-				    	<form>
-							<input type="radio" name="option" value="1">One<br>
-							<input type="radio" name="option" value="2">Two<br>
-							<input type="radio" name="option" value="3">Three<br>
-							<input type="radio" name="option" value="4">Four
-						</form>
-				    </div>
-				</div>
 				
 			</div>
 		  <!-- Carousel nav -->
