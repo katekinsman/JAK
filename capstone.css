@@ -13,3 +13,57 @@ button{
 footer{
     text-align: center;
 }
+
+/*slider*/
+#slider{
+    position: relative;
+    overflow: hidden;
+    margin: 5em auto 0 auto;
+    height: 35em;
+    width: 70em;
+}
+#sliderul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 35em;
+}
+
+#sliderul .sliderli {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding-left: 6em;
+    width: 70em;
+    height: auto;
+}
+
+a.control_prev, a.control_next {
+    position: absolute;
+    top: 40%;
+    z-index: 999;
+    display: block;
+    padding: 4% 3%;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+.control_next img, .control_prev img{
+    width: 3em;
+    height: auto;
+}
+a.control_prev {
+    border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+    right: 0;
+    border-radius: 2px 0 0 2px;
+}
+.page{
+    height: 35em;
+    width: auto;
+}
+/*slider over */
