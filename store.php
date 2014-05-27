@@ -1,8 +1,9 @@
 <div class="panel panel-default">
     <div class="panel-body">
-        <h3>Store</h3>
-        <p>Buy stuff for your avatar or to use in your class with your coins here!</p>
-
+      <div style="text-align:center;">
+        <h2>Welcome to the Store</h2>
+        <p>Buy items for <b>your avatar</b> or items that can be used <b>in your class</b> with your coins here!</p>
+      </div>
         <ul class="nav nav-tabs" id="storeTab">
             <li class="active"><a href="#in-game" data-toggle-="tab">For Avatar</a></li>
             <li><a href="#in-class" data-toggle-="tab">For Class</a></li>
@@ -143,19 +144,46 @@
                             <div class="panel panel-default">
                                 <table class="table">
                                     <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
+                                         <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Pizza.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Pizza.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Pizza.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
                                     </tr>
                                     <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
+                                         <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Playground.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Playground.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Playground.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
                                     </tr>
                                     <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
+                                         <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Movie.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Movie.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Movie.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
                                     </tr>
                                 </table>
                             </div>
@@ -164,40 +192,46 @@
                             <div class="panel panel-default">
                                 <table class="table">
                                     <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
+                                     <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Movie.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Movie.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Movie.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
                                     </tr>
                                     <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
+                                         <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Pizza.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Pizza.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Pizza.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
                                     </tr>
                                     <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="panel panel-default">
-                                <table class="table">
-                                    <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-class item</button></td>
+                                         <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Playground.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Playground.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Playground.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
                                     </tr>
                                 </table>
                             </div>

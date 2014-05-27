@@ -4,7 +4,8 @@
   	<div style="text-align:center; overflow:auto; float:left; width:40%;">
   		<h1>My Avatar</h1>
 		<img src="http://www.clipartbest.com/cliparts/nTB/X6B/nTBX6BETA.gif" height="10%" width="10%">
-		<h2>Your have # coins!</h2>
+		<h3>You have # coins!</h3>
+		<p>View your inventory here. You can purchase more items at the store!</p>
 	</div>
     
 	<div id="myCarousel" class="carousel" style="float:right; width:60%" data-interval="false">

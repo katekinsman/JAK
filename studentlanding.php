@@ -15,13 +15,13 @@
 
     <body style="background-color:#eee;">
     	<div class="jumbotron" style="text-align:center;">
-    		<h1>What Would You Like To Do?</h1>
+    		<p>What would you like to do?</p>
 			<div class="btn-group-vertical btn-group-lg">
-				<a href="/studenttemplate.php?page=theme"><button type="button" class="btn btn-default btn-lg">Play</button></a>
-			  	<a href="/studenttemplate.php?page=avatar"><button type="button" class="btn btn-default btn-lg">My Avatar</button></a>
-			 	<a href="/studenttemplate.php?page=store"><button type="button" class="btn btn-default btn-lg">Store</button></a>
+				<a class="btn btn-default" href="/studenttemplate.php?page=theme"><span class="glyphicon glyphicon-play"></span> Play</a>
+			  	<a class="btn btn-default" href="/studenttemplate.php?page=avatar"><span class="glyphicon glyphicon-user"></span> View my Avatar</a>
+			 	<a class="btn btn-default" href="/studenttemplate.php?page=store"><span class="glyphicon glyphicon-shopping-cart"></span> Visit the Store</a>
 			</div>
 		</div>
 	</body>
 
-<html>
+</html>
