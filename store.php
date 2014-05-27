@@ -1,11 +1,11 @@
 <div class="panel panel-default">
     <div class="panel-body">
-
-        <p>Buy stuff with your coins here!</p>
+        <h3>Store</h3>
+        <p>Buy stuff for your avatar or to use in your class with your coins here!</p>
 
         <ul class="nav nav-tabs" id="storeTab">
-            <li class="active"><a href="#in-game" data-toggle-="tab">In-game</a></li>
-            <li><a href="#in-class" data-toggle-="tab">In-class</a></li>
+            <li class="active"><a href="#in-game" data-toggle-="tab">For Avatar</a></li>
+            <li><a href="#in-class" data-toggle-="tab">For Class</a></li>
         </ul>
         <div class="tab-content">
 
@@ -24,19 +24,46 @@
                             <div class="panel panel-default">
                                 <table class="table">
                                     <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
+                                       <td><a href="#" class="thumbnail">
+                                         <img src="/avatarimages/Shirt.png" 
+                                         alt="Shirt" width="30%" height="30%">
+                                      </a></td>
+                                    <td><a href="#" class="thumbnail">
+                                         <img src="/avatarimages/Green Shirt.png" 
+                                         alt="Shirt" width="30%" height="30%">
+                                      </a></td>
+                                    <td><a href="#" class="thumbnail">
+                                         <img src="/avatarimages/Grey Shirt.png" 
+                                         alt="Shirt" width="30%" height="30%">
+                                      </a></td>
                                     </tr>
                                     <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
+                                       <td><a href="#" class="thumbnail">
+                                         <img src="/avatarimages/Shirt.png" 
+                                         alt="Shirt" width="30%" height="30%">
+                                      </a></td>
+                                    <td><a href="#" class="thumbnail">
+                                         <img src="/avatarimages/Green Shirt.png" 
+                                         alt="Shirt" width="30%" height="30%">
+                                      </a></td>
+                                    <td><a href="#" class="thumbnail">
+                                         <img src="/avatarimages/Grey Shirt.png" 
+                                         alt="Shirt" width="30%" height="30%">
+                                      </a></td>
                                     </tr>
                                     <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
+                                        <td><a href="#" class="thumbnail">
+                                         <img src="/avatarimages/Shirt.png" 
+                                         alt="Shirt" width="30%" height="30%">
+                                      </a></td>
+                                    <td><a href="#" class="thumbnail">
+                                         <img src="/avatarimages/Green Shirt.png" 
+                                         alt="Shirt" width="30%" height="30%">
+                                      </a></td>
+                                    <td><a href="#" class="thumbnail">
+                                         <img src="/avatarimages/Grey Shirt.png" 
+                                         alt="Shirt" width="30%" height="30%">
+                                      </a></td>
                                     </tr>
                                 </table>
                             </div>
@@ -45,40 +72,46 @@
                             <div class="panel panel-default">
                                 <table class="table">
                                     <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
+                                         <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Green Pants.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Orange Pants.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/White Pants.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
                                     </tr>
                                     <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
+                                        <td><a href="#" class="thumbnail">
+                                         <img src="/avatarimages/Green Pants.png" 
+                                         alt="Shirt" width="25%" height="25%">
+                                      </a></td>
+                                    <td><a href="#" class="thumbnail">
+                                         <img src="/avatarimages/Orange Pants.png" 
+                                         alt="Shirt" width="25%" height="25%">
+                                      </a></td>
+                                    <td><a href="#" class="thumbnail">
+                                         <img src="/avatarimages/White Pants.png" 
+                                         alt="Shirt" width="25%" height="25%">
+                                      </a></td>
                                     </tr>
                                     <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="panel panel-default">
-                                <table class="table">
-                                    <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
-                                        <td><button type="button" class="btn btn-default center-block">in-game item</button></td>
+                                         <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Green Pants.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/Orange Pants.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
+                                        <td><a href="#" class="thumbnail">
+                                             <img src="/avatarimages/White Pants.png" 
+                                             alt="Shirt" width="25%" height="25%">
+                                          </a></td>
                                     </tr>
                                 </table>
                             </div>

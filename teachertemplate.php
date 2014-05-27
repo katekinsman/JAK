@@ -25,6 +25,10 @@
 </head>
 <body>
     <div id="content">
+        <nav class="navbar navbar-default" role="navigation">
+            <a class="navbar-brand" href="http://jakcapstone.azurewebsites.net/">SmartAdventure</a>
+        </nav>
+        
         <!-- Begin contents of the page, to be loaded dynamically -->
         <div class="panel panel-default">
             <!-- Nav tabs -->
