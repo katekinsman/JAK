@@ -15,44 +15,44 @@
 	    	<table class="table">
                 <tr>
                     <td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+				         <img src="/avatarimages/Shirt.png" 
+				         alt="Shirt" width="30%" height="30%">
 				      </a></td>
 					<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+				         <img src="/avatarimages/Green Shirt.png" 
+				         alt="Shirt" width="30%" height="30%">
 				      </a></td>
 					<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+				         <img src="/avatarimages/Grey Shirt.png" 
+				         alt="Shirt" width="30%" height="30%">
 				      </a></td>
                 </tr>
                 <tr>
                    	<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+				         <img src="/avatarimages/Shirt.png" 
+				         alt="Shirt" width="30%" height="30%">
 				      </a></td>
                    	<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+				         <img src="/avatarimages/Green Shirt.png" 
+				         alt="Shirt" width="30%" height="30%">
 				      </a></td>
                    	<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+				         <img src="/avatarimages/Grey Shirt.png" 
+				         alt="Shirt" width="30%" height="30%">
 				      </a></td>
                 </tr>
                 <tr>
                    	<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+				         <img src="/avatarimages/Shirt.png" 
+				         alt="Shirt" width="30%" height="30%">
 				      </a></td>
-                   	<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+					<td><a href="#" class="thumbnail">
+				         <img src="/avatarimages/Green Shirt.png" 
+				         alt="Shirt" width="30%" height="30%">
 				      </a></td>
-                   	<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+					<td><a href="#" class="thumbnail">
+				         <img src="/avatarimages/Grey Shirt.png" 
+				         alt="Shirt" width="30%" height="30%">
 				      </a></td>
                 </tr>
             </table>
@@ -62,44 +62,44 @@
 	    	<table class="table">
                 <tr>
                     <td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+				         <img src="/avatarimages/Green Pants.png" 
+				         alt="Shirt" width="25%" height="25%">
 				      </a></td>
 					<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+				         <img src="/avatarimages/Orange Pants.png" 
+				         alt="Shirt" width="25%" height="25%">
 				      </a></td>
 					<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+				         <img src="/avatarimages/White Pants.png" 
+				         alt="Shirt" width="25%" height="25%">
 				      </a></td>
                 </tr>
                 <tr>
                    	<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+				         <img src="/avatarimages/Green Pants.png" 
+				         alt="Shirt" width="25%" height="25%">
 				      </a></td>
-                   	<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+					<td><a href="#" class="thumbnail">
+				         <img src="/avatarimages/Orange Pants.png" 
+				         alt="Shirt" width="25%" height="25%">
 				      </a></td>
-                   	<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+					<td><a href="#" class="thumbnail">
+				         <img src="/avatarimages/White Pants.png" 
+				         alt="Shirt" width="25%" height="25%">
 				      </a></td>
                 </tr>
                 <tr>
                    	<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+				         <img src="/avatarimages/Green Pants.png" 
+				         alt="Shirt" width="25%" height="25%">
 				      </a></td>
-                   	<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+					<td><a href="#" class="thumbnail">
+				         <img src="/avatarimages/Orange Pants.png" 
+				         alt="Shirt" width="25%" height="25%">
 				      </a></td>
-                   	<td><a href="#" class="thumbnail">
-				         <img src="http://placehold.it/140x100" 
-				         alt="Generic placeholder thumbnail">
+					<td><a href="#" class="thumbnail">
+				         <img src="/avatarimages/White Pants.png" 
+				         alt="Shirt" width="25%" height="25%">
 				      </a></td>
                 </tr>
             </table>
