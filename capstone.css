@@ -1,3 +1,4 @@
+
 .panel{
     margin: 3em;
 }
@@ -19,7 +20,7 @@ footer{
     position: relative;
     overflow: hidden;
     margin: 5em auto 0 auto;
-    height: 35em;
+    height: 30em;
     width: 70em;
 }
 #sliderul {
@@ -37,12 +38,12 @@ footer{
     margin: 0;
     padding-left: 6em;
     width: 70em;
-    height: auto;
+    height: 35em;
 }
 
 a.control_prev, a.control_next {
     position: absolute;
-    top: 40%;
+    top: 30%;
     z-index: 999;
     display: block;
     padding: 4% 3%;
@@ -64,6 +65,11 @@ a.control_next {
 }
 .page{
     height: 35em;
-    width: auto;
+    width: 42em;
+    text-align: center;
 }
 /*slider over */
+
+.title{
+    margin-top: 3em
+}

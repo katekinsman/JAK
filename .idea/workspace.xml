@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0432bb1d-da29-4c7f-9ee5-4de89aa4159f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SmartAdventure Logo no background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/leftarrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rightarrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/slider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap-3.1.1-dist/bootstrap-3.1.1-dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/bootstrap-3.1.1-dist/bootstrap-3.1.1-dist/css/bootstrap.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/capstone.css" afterPath="$PROJECT_DIR$/capstone.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/play.php" afterPath="$PROJECT_DIR$/play.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/slider.js" afterPath="$PROJECT_DIR$/slider.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/studenttemplate.php" afterPath="$PROJECT_DIR$/studenttemplate.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,28 +30,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bootstrap.min.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bootstrap-3.1.1-dist/bootstrap-3.1.1-dist/css/bootstrap.min.css">
+      <file leaf-file-name="studenttemplate.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studenttemplate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="324" selection-end="324" vertical-scroll-proportion="0.5297398" vertical-offset="0" max-vertical-offset="538">
+            <state line="58" column="25" selection-start="2163" selection-end="2163" vertical-scroll-proportion="-7.5" vertical-offset="690" max-vertical-offset="1395">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="capstone.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="capstone.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/capstone.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="16" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Resumes  &amp; Apps/Portfolio/processbook/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="821" selection-end="821" vertical-scroll-proportion="29.541666" vertical-offset="1189" max-vertical-offset="1815">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
               <folding />
             </state>
           </provider>
@@ -64,22 +51,13 @@
       <file leaf-file-name="play.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/play.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="128" selection-start="2686" selection-end="2686" vertical-scroll-proportion="-16.708334" vertical-offset="469" max-vertical-offset="1140">
+            <state line="35" column="32" selection-start="1572" selection-end="1572" vertical-scroll-proportion="-10.625" vertical-offset="270" max-vertical-offset="1290">
               <folding>
-                <marker date="1401173534000" expanded="true" signature="1410:1472" placeholder="SELECT DISTI..." />
-                <marker date="1401173534000" expanded="true" signature="1675:1769" placeholder="SELECT Conte..." />
-                <marker date="1401173534000" expanded="true" signature="2176:2262" placeholder="SELECT DISTI..." />
-                <marker date="1401173534000" expanded="true" signature="2596:2684" placeholder="SELECT Answe..." />
+                <marker date="1401249081000" expanded="true" signature="1414:1476" placeholder="SELECT DISTI..." />
+                <marker date="1401249081000" expanded="true" signature="1693:1787" placeholder="SELECT Conte..." />
+                <marker date="1401249081000" expanded="true" signature="2194:2280" placeholder="SELECT DISTI..." />
+                <marker date="1401249081000" expanded="true" signature="2626:2714" placeholder="SELECT Answe..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="studenttemplate.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studenttemplate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="1515" selection-end="1515" vertical-scroll-proportion="-16.875" vertical-offset="240" max-vertical-offset="1365">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -87,16 +65,7 @@
       <file leaf-file-name="slider.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/slider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1230">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="process_book.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Resumes  &amp; Apps/Portfolio/processbook/process_book.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="20" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755">
+            <state line="71" column="43" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.0" vertical-offset="635" max-vertical-offset="1230">
               <folding />
             </state>
           </provider>
@@ -115,6 +84,7 @@
         <option value="Kate" />
       </list>
     </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -132,15 +102,15 @@
         <option value="$PROJECT_DIR$/student_contents.json" />
         <option value="$PROJECT_DIR$/site_contents.json" />
         <option value="$PROJECT_DIR$/store.php" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/teachertemplate.php" />
         <option value="$PROJECT_DIR$/selecttheme.php" />
         <option value="$PROJECT_DIR$/theme.php" />
         <option value="$PROJECT_DIR$/bootstrap-3.1.1-dist/bootstrap-3.1.1-dist/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/studenttemplate.php" />
-        <option value="$PROJECT_DIR$/capstone.css" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/slider.js" />
         <option value="$PROJECT_DIR$/play.php" />
+        <option value="$PROJECT_DIR$/capstone.css" />
       </list>
     </option>
   </component>
@@ -220,6 +190,128 @@
       <recent name="$PROJECT_DIR$/Not Used" />
     </key>
   </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/Thumbs.db</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/avatar.php</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/bootstrap-3.1.1-dist/css/bootstrap.min.css</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/index.html</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/store.php</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/studentlanding.php</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/theme.php</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/Movie.png</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/Pizza.png</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/Playground.png</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/bootstrap-3.1.1-dist/bootstrap-3.1.1-dist/css/bootstrap.min.css</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
@@ -277,7 +369,11 @@
       <created>1401169131513</created>
       <updated>1401169131513</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changing over carousel to homemade. still broken.">
+      <created>1401173764410</created>
+      <updated>1401173764410</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -302,10 +398,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="21" y="42" width="1419" height="770" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1460177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2581121" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19174041" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28018942" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -365,7 +461,8 @@
     <MESSAGE value="Deleted a few files, reorganized files. Put tabs and carousels in store. Put tabs in teacher." />
     <MESSAGE value="Fixed all SQL injections and loops" />
     <MESSAGE value="revised css" />
-    <option name="LAST_COMMIT_MESSAGE" value="revised css" />
+    <MESSAGE value="changing over carousel to homemade. still broken." />
+    <option name="LAST_COMMIT_MESSAGE" value="changing over carousel to homemade. still broken." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -375,10 +472,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="37" selection-start="3239" selection-end="3239" vertical-scroll-proportion="0.0" vertical-offset="728" max-vertical-offset="1305">
           <folding>
-            <marker date="1401173534000" expanded="true" signature="1410:1472" placeholder="SELECT DISTI..." />
-            <marker date="1401173534000" expanded="true" signature="1675:1769" placeholder="SELECT Conte..." />
-            <marker date="1401173534000" expanded="true" signature="2176:2262" placeholder="SELECT DISTI..." />
-            <marker date="1401173534000" expanded="true" signature="2596:2684" placeholder="SELECT Answe..." />
+            <marker date="1401249081000" expanded="true" signature="1414:1476" placeholder="SELECT DISTI..." />
+            <marker date="1401249081000" expanded="true" signature="1693:1787" placeholder="SELECT Conte..." />
+            <marker date="1401249081000" expanded="true" signature="2194:2280" placeholder="SELECT DISTI..." />
+            <marker date="1401249081000" expanded="true" signature="2626:2714" placeholder="SELECT Answe..." />
           </folding>
         </state>
       </provider>
@@ -560,24 +657,9 @@
         <state line="0" column="52" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="41" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Not Used/ajax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="37" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studentlanding.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.3114754" vertical-offset="114" max-vertical-offset="480" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.91029024" vertical-offset="0" max-vertical-offset="480" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Not Used/selecttheme.php">
@@ -607,63 +689,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="41" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="31" selection-start="1000" selection-end="1000" vertical-scroll-proportion="-13.166667" vertical-offset="44" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Resumes  &amp; Apps/Portfolio/processbook/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="0" selection-start="3548" selection-end="3548" vertical-scroll-proportion="-9.666667" vertical-offset="1283" max-vertical-offset="1815">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../Resumes  &amp; Apps/Portfolio/processbook/process_book.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="1" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="3000">
+        <state line="137" column="13" selection-start="2151" selection-end="2151" vertical-scroll-proportion="2.6548672" vertical-offset="855" max-vertical-offset="3000">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Resumes  &amp; Apps/Portfolio/processbook/process_book.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="20" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755">
+        <state line="106" column="28" selection-start="2596" selection-end="2596" vertical-scroll-proportion="0.49473685" vertical-offset="1280" max-vertical-offset="1755">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studentlanding.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="480">
+          <folding>
+            <marker date="1401242203000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studenttemplate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="25" selection-start="2163" selection-end="2163" vertical-scroll-proportion="-7.5" vertical-offset="690" max-vertical-offset="1395">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/slider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studenttemplate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1515" selection-end="1515" vertical-scroll-proportion="-16.875" vertical-offset="240" max-vertical-offset="1365">
+        <state line="71" column="43" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.0" vertical-offset="824" max-vertical-offset="1230">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/play.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="128" selection-start="2686" selection-end="2686" vertical-scroll-proportion="-16.708334" vertical-offset="469" max-vertical-offset="1140">
+        <state line="35" column="32" selection-start="1572" selection-end="1572" vertical-scroll-proportion="-10.625" vertical-offset="270" max-vertical-offset="1290">
           <folding>
-            <marker date="1401173534000" expanded="true" signature="1410:1472" placeholder="SELECT DISTI..." />
-            <marker date="1401173534000" expanded="true" signature="1675:1769" placeholder="SELECT Conte..." />
-            <marker date="1401173534000" expanded="true" signature="2176:2262" placeholder="SELECT DISTI..." />
-            <marker date="1401173534000" expanded="true" signature="2596:2684" placeholder="SELECT Answe..." />
+            <marker date="1401249081000" expanded="true" signature="1414:1476" placeholder="SELECT DISTI..." />
+            <marker date="1401249081000" expanded="true" signature="1693:1787" placeholder="SELECT Conte..." />
+            <marker date="1401249081000" expanded="true" signature="2194:2280" placeholder="SELECT DISTI..." />
+            <marker date="1401249081000" expanded="true" signature="2626:2714" placeholder="SELECT Answe..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Resumes  &amp; Apps/Portfolio/processbook/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="821" selection-end="821" vertical-scroll-proportion="29.541666" vertical-offset="1189" max-vertical-offset="1815">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/capstone.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="16" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap-3.1.1-dist/bootstrap-3.1.1-dist/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="324" selection-end="324" vertical-scroll-proportion="0.5297398" vertical-offset="0" max-vertical-offset="538">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>

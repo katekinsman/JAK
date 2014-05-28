@@ -10,7 +10,7 @@
             </div>
             <div class="modal-body">
                 Oh no, something has happened! In order to keep moving forward, you must read the story
-                and answer some questions.
+                and answer some questions.<br>
                 <img src="http://placehold.it/140x100" alt="Generic placeholder thumbnail">
             </div>
             <div class="modal-footer">
@@ -33,7 +33,7 @@
                 $theme = $_REQUEST['theme'];
                 $rows = $db->query("SELECT DISTINCT Title FROM `vw_fullstory` WHERE theme='$theme'");
                 $result = $rows->fetch(PDO::FETCH_BOTH); ?>
-                <h1><?php print $result[0]; ?></h1>
+                <h1 class="title"><?php print $result[0]; ?></h1>
             </section>
         </li>
         <!--pages -->
@@ -55,10 +55,17 @@
                 <section class="page">
                     <p><?php print $q; ?></p>
                     <!-- answer options -->
-                    <form>
+                    <form role="form">
                         <?php $opt = "SELECT AnswerValue, Correct FROM `vw_fullassessment` WHERE Question='$q' ORDER BY RAND()";
                         foreach ($db->query($opt) as $row) { ?>
-                            <input type="radio" name="option" value="<?=$row['Correct']?>"><?php print $row['AnswerValue']; ?> <br>
+                            <div class="form-group">
+                                <div class="radio" >
+                                    <label>
+                                        <input type="radio" name="optionsRadios" value="<?=$row['Correct']?>">
+                                        <?php print $row['AnswerValue']; ?>
+                                    </label>
+                                </div>
+                            </div>
                         <?php } ?>
                     </form>
                 </section>
@@ -69,3 +76,6 @@
     <a href="#" class="control_next"><img src="rightarrow.png"></a>
 
 </div>
+
+<!-- Javascript file for slider -->
+<script src="slider.js" type="text/javascript"></script>

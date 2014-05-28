@@ -30,14 +30,16 @@
         <!-- Optional theme -->
         <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap-theme.min.css">
 
+        <!-- Our CSS -->
         <link href="capstone.css" rel="stylesheet" type="text/css">
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
-        <!-- Javascript file for slider -->
-        <script src="slider.js" type="javascript"></script>
+
+
 
         <title><?= $pagetitle ?></title>
     </head>

@@ -55,7 +55,7 @@ function moveLeft() {
         $('#sliderul .sliderli:last-child').prependTo('#sliderul');
         $('#sliderul').css('left', '');
     });
-    getPrevious();
+    //getPrevious();
 };
 
 function moveRight() {
@@ -65,7 +65,7 @@ function moveRight() {
         $('#sliderul .sliderli:first-child').appendTo('#sliderul');
         $('#sliderul').css('left', '');
     });
-    getNext();
+    //getNext();
 };
 
 $(document).ready(function(){
