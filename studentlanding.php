@@ -1,3 +1,19 @@
+<?php
+
+    // MySQl Connection
+
+    $username = 'b23933fcb8ccea';
+    $password = '8471ac64';
+    $hostname = 'us-cdbr-azure-east-a.cloudapp.net:3306'; 
+    $database = 'capstonemysql';
+
+    $db = new PDO("mysql:dbname=$database;host=$hostname", $username, $password);
+
+    $name = $_POST["name"];
+    $insert = "INSERT INTO `Student` (`StudentName`) VALUES ('$name')";
+    $db->query($insert);
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,6 +31,7 @@
 
     <body style="background-color:#eee;">
     	<div class="jumbotron" style="text-align:center;">
+            <h2>Hello, <?php print $name ?>!</h2>
     		<p>What would you like to do?</p>
 			<div class="btn-group-vertical btn-group-lg">
 				<a class="btn btn-default" href="/studenttemplate.php?page=theme"><span class="glyphicon glyphicon-play"></span> Play</a>

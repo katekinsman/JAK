@@ -18,13 +18,13 @@
 	<body style="background-color:#eee;">
 		<div class="jumbotron" style="text-align:center;">
 			<img src="/SmartAdventure logo no background.png" height="50%" width="50%">
-			<p>What is your name?</p>
-			<form>
+			<p>My name is:</p>
+			<form action="/studentlanding.php" method="post">
 				<input type="text" name="name">
+				<p>I am a:</p>
+				<button type="submit" class="btn btn-default">Student</button>
+				<a href="/teachertemplate.php"><button type="button" class="btn btn-default">Teacher</button></a>
 			</form>
-			<p>Are you a:</p>
-			<a href="/studentlanding.php"><button type="button" class="btn btn-default">Student</button></a>
-			<a href="/teachertemplate.php"><button type="button" class="btn btn-default">Teacher</button></a>
 		</div>
 	</body>
 
