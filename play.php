@@ -79,6 +79,7 @@
                             </div>
                         <?php } ?>
                     </form>
+                    <button type="submit" formaction="/studentanswer.php" class="btn btn-default">Was I Right?</button>
 
                 </section>
 

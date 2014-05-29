@@ -16,6 +16,12 @@
     $name = $_POST["name"];
     $insert = "INSERT INTO `Student` (`StudentName`) VALUES ('$name')";
     $db->query($insert);
+
+    session_start();
+    if (!isset($_SESSION["username"])) {
+      $_SESSION["username"] = $name;  // default
+    } 
+    $username = $_SESSION["username"];
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +46,7 @@
         <div id="content">
             <nav class="navbar navbar-default" role="navigation">
                 <a class="navbar-brand" href="http://jakcapstone.azurewebsites.net/">SmartAdventure</a>
-                <p class="navbar-text">Hello, <?php print $name ?> </p>
+                <a class="navbar-brand navbar-right" href="/endsession.php">Logout <?php print $username?></a>
             </nav>
             
             <!-- Begin contents of the page, to be loaded dynamically -->

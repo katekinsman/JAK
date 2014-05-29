@@ -9,9 +9,17 @@
 
     $db = new PDO("mysql:dbname=$database;host=$hostname", $username, $password);
 
+    // Insert name into DB
     $name = $_POST["name"];
     $insert = "INSERT INTO `Student` (`StudentName`) VALUES ('$name')";
     $db->query($insert);
+
+    // Create new session for current user
+    session_start();
+    if (!isset($_SESSION["username"])) {
+      $_SESSION["username"] = $name;  // default
+    }
+    $username = $_SESSION["username"];
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +39,7 @@
 
     <body style="background-color:#eee;">
     	<div class="jumbotron" style="text-align:center;">
-            <h2>Hello, <?php print $name ?>!</h2>
+            <h2>Hello, <?php print $username ?>!</h2>
     		<p>What would you like to do?</p>
 			<div class="btn-group-vertical btn-group-lg">
 				<a class="btn btn-default" href="/studenttemplate.php?page=theme"><span class="glyphicon glyphicon-play"></span> Play</a>
