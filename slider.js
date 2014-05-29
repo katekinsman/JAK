@@ -1,79 +1,84 @@
 /**
  * Created by Kate on 5/26/14.
  */
-/*var SECTION = 1;
 
-function getPrevious(){
-    if(SECTION == 1){
-        SECTION = 11;
-    }else{
-        SECTION --;
-    }
+//for story
+var SlideCount = $('#storySlider .sliderli').length;
+var SlideWidth = $('#storySlider .sliderli').width();
+var SlideHeight = $('#storySlider .sliderli').height();
+var SliderUlWidth = SlideCount * SlideWidth;
+$('#storySlider').css({ width: SlideWidth, height: SlideHeight });
+$('#storySlider .sliderul').css({ width: SliderUlWidth, marginLeft: - SlideWidth });
+$('#storySlider .sliderul .sliderli:last-child').prependTo('#storySlider .sliderul');
+var sCurPage = 1;
 
-    var file = 's' + SECTION + '.html';
-    if(SECTION < 12){
 
-    }
-}
-
-function getNext(){
-    if(SECTION == 11){
-        SECTION = 1;
-    }else{
-        SECTION ++;
-    }
-    var file = 's' + SECTION + '.html';
-    if(SECTION < 12){
-
-    }
-}
-
-function injectNext(data){
-    var newSection = $('<div>', {'id': 'desc'}).html(data);
-    $('#desc').replaceWith(newSection);
-}
-function injectPrevious(data){
-    var newSection = $('<div>', {'id': 'desc'}).html(data);
-    $('#desc').replaceWith(newSection);
-}*/
-
-var slideCount = $('#sliderul .sliderli').length;
-var slideWidth = $('#sliderul .sliderli').width();
-var slideHeight = $('#sliderul .sliderli').height();
-var sliderUlWidth = slideCount * slideWidth;
-
-$('#slider').css({ width: slideWidth, height: slideHeight });
-
-$('#sliderul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-
-$('#sliderul .sliderli:last-child').prependTo('#sliderul');
+//for questions
+var qSlideCount = $('#questionSlider .sliderli').length;
+var qSlideWidth = $('#questionSlider .sliderli').width();
+var qSlideHeight = $('#questionSlider .sliderli').height();
+var qSliderUlWidth = qSlideCount * qSlideWidth;
+$('#questionSlider').css({ width: qSlideWidth, height: qSlideHeight });
+$('#questionSlider .sliderul').css({ width: qSliderUlWidth, marginLeft: - qSlideWidth });
+$('#questionSlider .sliderul .sliderli:last-child').prependTo('#questionSlider .sliderul');
+var qCurPage = 1;
+$('#questionSlider').toggleClass("hidden");
 
 function moveLeft() {
-    $('#sliderul').animate({
-        left: + slideWidth
-    }, 200, function () {
-        $('#sliderul .sliderli:last-child').prependTo('#sliderul');
-        $('#sliderul').css('left', '');
-    });
-    //getPrevious();
+    if(sCurPage > 1){
+
+        $('#storySlider .sliderul').animate({
+            left: + SlideWidth
+        }, 200, function () {
+            $('#storySlider .sliderul .sliderli:last-child').prependTo('#storySlider .sliderul');
+            $('#storySlider .sliderul').css('left', '');
+        });
+        sCurPage--;
+    }
 };
 
 function moveRight() {
-    $('#sliderul').animate({
-        left: - slideWidth
-    }, 200, function () {
-        $('#sliderul .sliderli:first-child').appendTo('#sliderul');
-        $('#sliderul').css('left', '');
-    });
-    //getNext();
+    if(sCurPage < SlideCount){
+
+        $('#storySlider .sliderul').animate({
+            left: - SlideWidth
+        }, 200, function () {
+            $('#storySlider .sliderul .sliderli:first-child').appendTo('#storySlider .sliderul');
+            $('#storySlider .sliderul').css('left', '');
+        });
+        sCurPage++;
+    }else{
+        $('#storySlider').toggleClass("hidden");
+        $('#questionSlider').toggleClass("hidden");
+
+    }
+};
+
+function qMoveRight() {
+    if(qCurPage < qSlideCount){
+        $('#questionSlider .sliderul').animate({
+            left: - qSlideWidth
+        }, 200, function () {
+            $('#questionSlider .sliderul .sliderli:first-child').appendTo('#questionSlider .sliderul');
+            $('#questionSlider .sliderul').css('left', '');
+        });
+        qCurPage++;
+    }else{
+        $('#questionSlider').toggleClass("hidden");
+        alert("Yay! You did it!");
+    }
 };
 
 $(document).ready(function(){
-    $('a.control_prev').click(function () {
+    $('#questionSlider a.control_next').click(function () {
+        qMoveRight();
+    });
+
+    $('#storySlider a.control_prev').click(function () {
         moveLeft();
     });
 
-    $('a.control_next').click(function () {
+    $('#storySlider a.control_next').click(function () {
         moveRight();
     });
 });

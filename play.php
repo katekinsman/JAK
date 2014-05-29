@@ -20,12 +20,12 @@
     </div>
 </div>
 
-
-<div id="slider">
+<!--Story Slider-->
+<div id="storySlider" class="slider">
 
     <a href="#" class="control_prev"><img src="leftarrow.png"></a>
 
-    <ul id="sliderul">
+    <ul class="sliderul">
         <li class="sliderli">
             <section class="page">
                 <!--title-->
@@ -46,14 +46,25 @@
                 </section>
             </li>
         <?php } ?>
+    </ul>
 
+    <a href="#" class="control_next"><img src="rightarrow.png"></a>
+
+</div>
+
+<!--Question Slider-->
+<div id="questionSlider" class="slider" class="hidden">
+
+    <ul class="sliderul">
         <!-- Questions -->
         <?php $findQuestions = "SELECT DISTINCT Question FROM `vw_fullassessment` WHERE theme='$theme' ORDER BY RAND()";
         foreach ($db->query($findQuestions) as $questions) {
             $q = $questions['Question']?>
+
             <li class="sliderli">
                 <section class="page">
                     <p><?php print $q; ?></p>
+
                     <!-- answer options -->
                     <form role="form">
                         <?php $opt = "SELECT AnswerValue, Correct FROM `vw_fullassessment` WHERE Question='$q' ORDER BY RAND()";
@@ -68,12 +79,14 @@
                             </div>
                         <?php } ?>
                     </form>
+
                 </section>
+
             </li>
         <?php } ?>
     </ul>
 
-    <a href="#" class="control_next"><img src="rightarrow.png"></a>
+    <a href="#questionSlider" class="control_next"><img src="rightarrow.png"></a>
 
 </div>
 

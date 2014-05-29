@@ -16,14 +16,14 @@ footer{
 }
 
 /*slider*/
-#slider{
+.slider{
     position: relative;
     overflow: hidden;
     margin: 5em auto 0 auto;
     height: 30em;
     width: 70em;
 }
-#sliderul {
+.sliderul {
     position: relative;
     margin: 0;
     padding: 0;
@@ -31,7 +31,7 @@ footer{
     height: 35em;
 }
 
-#sliderul .sliderli {
+.sliderul .sliderli {
     position: relative;
     display: block;
     float: left;
@@ -72,4 +72,16 @@ a.control_next {
 
 .title{
     margin-top: 3em
+}
+
+/*Bootstrap Classes*/
+.show {
+   display: block !important;
+}
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+.invisible {
+    visibility: hidden;
 }
