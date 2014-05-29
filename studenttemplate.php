@@ -15,6 +15,12 @@
     $db = new PDO("mysql:dbname=$database;host=$hostname", $username, $password);
 
     $theme = '';
+
+    session_start();
+    if (!isset($_SESSION["username"])) {
+      $_SESSION["username"] = $name;  // default
+    } 
+    $username = $_SESSION["username"];
 ?>
 
 <!DOCTYPE html>
@@ -39,8 +45,6 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 
-
-
         <title><?= $pagetitle ?></title>
     </head>
 
@@ -49,7 +53,7 @@
 
             <!-- Begin contents of the page, to be loaded dynamically -->
                 <nav class="navbar navbar-default" role="navigation">
-                    <a class="navbar-brand" href="http://jakcapstone.azurewebsites.net/">SmartAdventure</a>
+                    <p class="navbar-brand">SmartAdventure</p>
                     <ul class="nav navbar-nav" id="nav">
                         <?php foreach ($nav['student'] as $pageid => $title) { ?>
                             <li <?= $cur_page == $pageid ? 'class="current"' : ''; ?>>
@@ -57,6 +61,7 @@
                             </li>
                         <?php } ?>
                     </ul>
+                    <a class="navbar-brand navbar-right" href="/endsession.php">Logout <?php print $username?></a>
                 </nav>
 
             <?php
@@ -79,8 +84,6 @@
 
             $('.carousel').carousel();
         </script>
-
-
 
     </body>
 

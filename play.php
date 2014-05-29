@@ -62,7 +62,10 @@
                                 <div class="radio" >
                                     <label>
                                         <input type="radio" name="optionsRadios" value="<?=$row['Correct']?>">
-                                        <?php print $row['AnswerValue']; ?>
+                                        <?php 
+                                            print $row['AnswerValue']; 
+                                            $db->query("CALL new_selection('$username', '$AnswerValue')");
+                                        ?>
                                     </label>
                                 </div>
                             </div>
