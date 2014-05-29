@@ -61,16 +61,16 @@
                             <div class="form-group">
                                 <div class="radio" >
                                     <label>
-                                        <input type="radio" name="optionsRadios" value="<?=$row['Correct']?>">
+                                        <input type="radio" name="answers" value="<?=$row['Correct']?>">
                                         <?php 
                                             print $row['AnswerValue']; 
-                                            $db->query("CALL new_selection('$username', '$AnswerValue')");
                                         ?>
                                     </label>
                                 </div>
                             </div>
                         <?php } ?>
                     </form>
+                    <button type="submit" formaction="/studentanswer.php" class="btn btn-default">Was I Right?</button>
                 </section>
             </li>
         <?php } ?>
