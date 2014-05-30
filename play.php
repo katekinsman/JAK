@@ -67,7 +67,7 @@
 
                     <!-- answer options -->
                     <form method="post">
-                        <?php $opt = "SELECT AnswerValue, Correct FROM `vw_fullassessment` WHERE Question='$q' ORDER BY RAND()";
+                        <?php $opt = "SELECT AnswerValue FROM `vw_fullassessment` WHERE Question='$q' ORDER BY RAND()";
                         foreach ($db->query($opt) as $row) { ?>
                             <div class="form-group">
                                 <div class="radio" >
@@ -78,7 +78,6 @@
                                 </div>
                             </div>
                         <?php } ?>
-                        <button type="submit" formaction="/studentanswer.php" class="btn btn-default">Was I Right?</button>
                     </form>
                 </section>
 
@@ -94,6 +93,21 @@
     */?>-->
     <a href="#questionSlider" id="clickarrow" class="control_next"><img src="rightarrow.png"></a>
 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="answerModal" tabindex="-1" role="dialog" aria-labelledby="answerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="answerModalLabel">Feedback</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Javascript file for slider -->

@@ -19,14 +19,12 @@
 
 	$correct = "SELECT Correct FROM `vw_fullassessment` WHERE AnswerValue = '$studentanswer'";
 	$correctresult = $db->query($correct);
-	$result = $correctresult->fetch(PDO::FETCH_BOTH); 
-?>
+	$result = $correctresult->fetch(PDO::FETCH_BOTH);
 
-<div style="text-align:center;">
-	<?php
-		if($result[0] == 1) {
-			?> <h2> <?php print "You were right!"; ?> </h2>
-		<?php } else {
-			?> <h2> <?php print "You were wrong :("; ?> </h2>
-		<?php } ?>
-</div>
+    if($result[0] == 1) {
+        echo "You were right!";
+    }else {
+        echo "You were wrong :(";
+    }
+
+?>

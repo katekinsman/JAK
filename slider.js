@@ -54,6 +54,19 @@ function moveRight() {
     }
 };
 
+function checkAnswer(){
+    $.ajax({
+        url: "studentanswer.php",
+        success: function(responseHTML){
+            var strData = responseHTML;
+            $('#answerModal .modal-body').html(strData);
+        },
+        dataType: "html"
+    });
+    $('#answerModal').modal({show: true});
+    return $('#answerModal .modal-body').text();
+}
+
 function qMoveRight() {
     if(qCurPage < qSlideCount){
         $('#questionSlider .sliderul').animate({
@@ -65,13 +78,17 @@ function qMoveRight() {
         qCurPage++;
     }else{
         $('#questionSlider').toggleClass("hidden");
-        alert("Yay! You did it!");
+        $('#answerModal .modal-body').html("You did it!");
+        $('#answerModal').modal({show: true});
     }
 };
 
 $(document).ready(function(){
     $('#questionSlider a.control_next').click(function () {
-        qMoveRight();
+        var answer = checkAnswer();
+        if(answer === "You were right!"){
+            qMoveRight();
+        }
     });
 
     $('#storySlider a.control_prev').click(function () {
@@ -81,4 +98,6 @@ $(document).ready(function(){
     $('#storySlider a.control_next').click(function () {
         moveRight();
     });
+
+
 });
