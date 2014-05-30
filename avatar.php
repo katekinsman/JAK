@@ -5,6 +5,12 @@
   		<h1>My Avatar</h1>
 		<img src="http://www.clipartbest.com/cliparts/nTB/X6B/nTBX6BETA.gif" height="10%" width="10%">
 		<h3>You have # coins!</h3>
+		<!-- Total coins for student -->
+		<?php $coins = $db->query("SELECT `StorySum` FROM vw_totalstorycoins
+							WHERE `StudentName` = '$name'
+							AND `Theme` = '$theme'")
+			print $coins;
+		?>
 		<p>View your inventory here. You can purchase more items at the store!</p>
 	</div>
     

@@ -18,10 +18,10 @@
     $db->query($insert);
 
     session_start();
-    if (!isset($_SESSION["username"])) {
-      $_SESSION["username"] = $name;  // default
+    if (!isset($_SESSION["user"])) {
+      $_SESSION["user"] = $name;  // default
     } 
-    $username = $_SESSION["username"];
+    $user = $_SESSION["user"];
 ?>
 
 <!DOCTYPE html>

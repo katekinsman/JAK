@@ -17,10 +17,10 @@
     $theme = '';
 
     session_start();
-    if (!isset($_SESSION["username"])) {
-      $_SESSION["username"] = $name;  // default
+    if (!isset($_SESSION["user"])) {
+      $_SESSION["user"] = $name;  // default
     } 
-    $username = $_SESSION["username"];
+    $user = $_SESSION["user"];
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +61,7 @@
                             </li>
                         <?php } ?>
                     </ul>
-                    <a class="navbar-brand navbar-right" href="/endsession.php">Logout <?php print $username?></a>
+                    <a class="navbar-brand navbar-right" href="/endsession.php">Logout <?php print $user?></a>
                 </nav>
 
             <?php

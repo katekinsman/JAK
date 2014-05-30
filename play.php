@@ -66,30 +66,41 @@
                     <p><?php print $q; ?></p>
 
                     <!-- answer options -->
-                    <form role="form">
+                    <form method="post">
                         <?php $opt = "SELECT AnswerValue, Correct FROM `vw_fullassessment` WHERE Question='$q' ORDER BY RAND()";
                         foreach ($db->query($opt) as $row) { ?>
                             <div class="form-group">
                                 <div class="radio" >
                                     <label>
-                                        <input type="radio" name="optionsRadios" value="<?=$row['Correct']?>">
+                                        <input type="radio" name="answers" value="<?=$row['AnswerValue']?>">
                                         <?php print $row['AnswerValue']; ?>
                                     </label>
                                 </div>
                             </div>
                         <?php } ?>
+                        <button type="submit" class="btn btn-default">Was I Right?</button>
                     </form>
-                    <button type="submit" formaction="/studentanswer.php" class="btn btn-default">Was I Right?</button>
-
                 </section>
 
             </li>
         <?php } ?>
     </ul>
-
-    <a href="#questionSlider" class="control_next"><img src="rightarrow.png"></a>
+    <!--<?php /*
+        $studentanswer = $_POST['answers'];
+        $db->query("CALL capstonemysql.new_selection('$user', '$studentanswer')");
+        $correct = "SELECT Correct FROM `vw_fullassessment` WHERE AnswerValue = '$studentanswer'";
+        $correctresult = $db->query($correct);
+        $result = $correctresult->fetch(PDO::FETCH_BOTH); 
+    */?>-->
+    <a href="#questionSlider" id="clickarrow" class="control_next"><img src="rightarrow.png"></a>
 
 </div>
 
 <!-- Javascript file for slider -->
 <script src="slider.js" type="text/javascript"></script>
+
+<!--<script type="text/javascript">
+    $("button").click(function(){
+        alert("test");
+    });
+</script>-->
