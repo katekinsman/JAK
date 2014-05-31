@@ -24,7 +24,7 @@
     if($result[0] == 1) {
         echo "You were right!";
     }else {
-        echo "You were wrong :(";
+        echo "Oh no! Try again.";
     }
 
 ?>

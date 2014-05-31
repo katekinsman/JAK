@@ -48,6 +48,7 @@ function moveRight() {
         });
         sCurPage++;
     }else{
+        //story has ended. hide story, show questions
         $('#storySlider').toggleClass("hidden");
         $('#questionSlider').toggleClass("hidden");
 
@@ -55,16 +56,23 @@ function moveRight() {
 };
 
 function checkAnswer(){
+    var curInput = "#" + qCurPage + " input:radio[name=answers]:checked";
+
     $.ajax({
-        url: "studentanswer.php",
+        type: "POST",
+        url: "studentAnswer.php",
+        dataType: "html",
+        data: {answers: $(curInput).val()},
         success: function(responseHTML){
-            var strData = responseHTML;
-            $('#answerModal .modal-body').html(strData);
-        },
-        dataType: "html"
+            $('#answerModal .modal-body').html(responseHTML);
+            $('#answerModal').modal({show: true});
+            if(responseHTML == "You were right!"){
+                qMoveRight();
+            }
+        }
     });
-    $('#answerModal').modal({show: true});
-    return $('#answerModal .modal-body').text();
+
+//    $('#answerModal').modal({show: true});
 }
 
 function qMoveRight() {
@@ -77,18 +85,24 @@ function qMoveRight() {
         });
         qCurPage++;
     }else{
+        //questions have ended. hide questions, display modal
         $('#questionSlider').toggleClass("hidden");
-        $('#answerModal .modal-body').html("You did it!");
+        $('#answerModal .modal-body').html("You did it! Results go here!");
         $('#answerModal').modal({show: true});
     }
 };
 
 $(document).ready(function(){
+
+    //debug checkboxes
+//    $('input[type=radio]').change(function(){
+//        $('#1 input[type=radio]').each(function(index){
+//            console.log("" + $(this) + ".prop('checked'):" + $(this).prop("checked"));
+//        });
+//    });
+
     $('#questionSlider a.control_next').click(function () {
-        var answer = checkAnswer();
-        if(answer === "You were right!"){
-            qMoveRight();
-        }
+        checkAnswer();
     });
 
     $('#storySlider a.control_prev').click(function () {

@@ -57,11 +57,11 @@
                     <ul class="nav navbar-nav" id="nav">
                         <?php foreach ($nav['student'] as $pageid => $title) { ?>
                             <li <?= $cur_page == $pageid ? 'class="current"' : ''; ?>>
-                                <a href="studenttemplate.php?page=<?= $pageid ?>"><?= $title ?></a>
+                                <a href="studentTemplate.php?page=<?= $pageid ?>"><?= $title ?></a>
                             </li>
                         <?php } ?>
                     </ul>
-                    <a class="navbar-brand navbar-right" href="/endsession.php">Logout <?php print $user?></a>
+                    <a class="navbar-brand navbar-right" href="/endSession.php">Logout <?php print $user?></a>
                 </nav>
 
             <?php

@@ -46,7 +46,7 @@
         <div id="content">
             <nav class="navbar navbar-default" role="navigation">
                 <a class="navbar-brand" href="http://jakcapstone.azurewebsites.net/">SmartAdventure</a>
-                <a class="navbar-brand navbar-right" href="/endsession.php">Logout <?php print $username?></a>
+                <a class="navbar-brand navbar-right" href="/endSession.php">Logout <?php print $username?></a>
             </nav>
             
             <!-- Begin contents of the page, to be loaded dynamically -->
@@ -63,7 +63,7 @@
                 <div class="tab-content">
                     <div class="tab-pane active" id="students"><?php include "students.php"; ?></div>
                     <div class="tab-pane" id="classStats"><?php include "class.php"; ?></div>
-                    <div class="tab-pane" id="pastClasses"><?php include "pastclass.php"; ?></div>
+                    <div class="tab-pane" id="pastClasses"><?php include "pastClass.php"; ?></div>
                     <div class="tab-pane" id="configure"><?php include "configure.php"; ?></div>
                 </div>
             </div>

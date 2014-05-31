@@ -58,18 +58,18 @@
     <ul class="sliderul">
         <!-- Questions -->
         <?php $findQuestions = "SELECT DISTINCT Question FROM `vw_fullassessment` WHERE theme='$theme' ORDER BY RAND()";
+        $qNum = 1;
         foreach ($db->query($findQuestions) as $questions) {
-            $q = $questions['Question']?>
-
+            $q = $questions['Question'];?>
             <li class="sliderli">
                 <section class="page">
                     <p><?php print $q; ?></p>
 
                     <!-- answer options -->
-                    <form method="post">
+                    <form id="<?=$qNum?>" method="post">
                         <?php $opt = "SELECT AnswerValue FROM `vw_fullassessment` WHERE Question='$q' ORDER BY RAND()";
                         foreach ($db->query($opt) as $row) { ?>
-                            <div class="form-group">
+                            <div  class="form-group">
                                 <div class="radio" >
                                     <label>
                                         <input type="radio" name="answers" value="<?=$row['AnswerValue']?>">
@@ -82,7 +82,8 @@
                 </section>
 
             </li>
-        <?php } ?>
+            <?php $qNum++;
+        } ?>
     </ul>
     <!--<?php /*
         $studentanswer = $_POST['answers'];
