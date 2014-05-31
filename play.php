@@ -84,13 +84,7 @@
             </li>
         <?php } ?>
     </ul>
-    <!--<?php /*
-        $studentanswer = $_POST['answers'];
-        $db->query("CALL capstonemysql.new_selection('$user', '$studentanswer')");
-        $correct = "SELECT Correct FROM `vw_fullassessment` WHERE AnswerValue = '$studentanswer'";
-        $correctresult = $db->query($correct);
-        $result = $correctresult->fetch(PDO::FETCH_BOTH); 
-    */?>-->
+
     <a href="#questionSlider" id="clickarrow" class="control_next"><img src="rightarrow.png"></a>
 
 </div>
@@ -112,9 +106,3 @@
 
 <!-- Javascript file for slider -->
 <script src="slider.js" type="text/javascript"></script>
-
-<!--<script type="text/javascript">
-    $("button").click(function(){
-        alert("test");
-    });
-</script>-->

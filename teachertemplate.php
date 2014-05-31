@@ -46,7 +46,7 @@
         <div id="content">
             <nav class="navbar navbar-default" role="navigation">
                 <a class="navbar-brand" href="http://jakcapstone.azurewebsites.net/">SmartAdventure</a>
-                <a class="navbar-brand navbar-right" href="/endsession.php">Logout <?php print $username?></a>
+                <a class="navbar-brand navbar-right" href="/endsession.php">Logout <?php print $user?></a>
             </nav>
             
             <!-- Begin contents of the page, to be loaded dynamically -->
