@@ -87,8 +87,28 @@ function qMoveRight() {
     }else{
         //questions have ended. hide questions, display modal
         $('#questionSlider').toggleClass("hidden");
-        $('#answerModal .modal-body').html("You did it! Results go here!");
-        $('#answerModal').modal({show: true});
+
+        // finds theme in URL
+        $.urlParam = function(name){
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (results==null){
+               return null;
+            }
+            else{
+               return results[1] || 0;
+            }
+        }
+        var currenttheme = $.urlParam('theme');
+
+        $.ajax({
+            url: "studentCoins.php",
+            dataType: "html",
+            data: {theme: currenttheme},
+            success: function(responseHTML){
+                $('#answerModal .modal-body').html(responseHTML);
+                $('#answerModal').modal({show: true});
+            }
+        });
     }
 };
 
