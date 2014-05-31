@@ -4,13 +4,19 @@
   	<div style="text-align:center; overflow:auto; float:left; width:40%;">
   		<h1>My Avatar</h1>
 		<img src="http://www.clipartbest.com/cliparts/nTB/X6B/nTBX6BETA.gif" height="10%" width="10%">
-		<h3>You have # coins!</h3>
 		<!-- Total coins for student -->
-		<?php $coins = $db->query("SELECT `StorySum` FROM vw_totalstorycoins
-							WHERE `StudentName` = '$name'
-							AND `Theme` = '$theme'")
-			print $coins;
+		<?php 	
+
+			$coinsquery = ("SELECT sum(`StorySum`) FROM `vw_totalstorycoins`
+				WHERE `StudentName` = '$user'");
+				$result = $db->query($coinsquery);
+				$coins = $result->fetch(PDO::FETCH_BOTH);
+				
+				if ($coins[0] == null) {
+					$coins[0] = 0;
+				}
 		?>
+		<h3>You have <?php print $coins[0] ?> coins!</h3>
 		<p>View your inventory here. You can purchase more items at the store!</p>
 	</div>
     

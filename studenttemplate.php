@@ -21,6 +21,16 @@
       $_SESSION["user"] = $name;  // default
     } 
     $user = $_SESSION["user"];
+ 
+    $coinsquery = ("SELECT sum(`StorySum`) FROM `vw_totalstorycoins`
+    WHERE `StudentName` = '$user'");
+    $result = $db->query($coinsquery);
+    $coins = $result->fetch(PDO::FETCH_BOTH);
+
+    if ($coins[0] == null) {
+        $coins[0] = 0;
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -50,9 +60,9 @@
 
     <body>            
         <div id="content">
-
             <!-- Begin contents of the page, to be loaded dynamically -->
                 <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
                     <p class="navbar-brand">SmartAdventure</p>
                     <ul class="nav navbar-nav" id="nav">
                         <?php foreach ($nav['student'] as $pageid => $title) { ?>
@@ -61,7 +71,11 @@
                             </li>
                         <?php } ?>
                     </ul>
-                    <a class="navbar-brand navbar-right" href="/endSession.php">Logout <?php print $user?></a>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><p class="navbar-text">Coins: <span class="badge"><?php print $coins[0]; ?></span></p></li>
+                        <li><a href="/endSession.php">Logout <?php print $user?></a></li>
+                    </ul>
+                 </div>
                 </nav>
 
             <?php

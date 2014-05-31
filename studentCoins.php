@@ -22,5 +22,11 @@
 	$result = $db->query($coinsquery);
 	$coins = $result->fetch(PDO::FETCH_BOTH);
 
-	echo "You have $coins[0] coins!";
+	echo "You found $coins[0] coins! ";
+
+    if ($coins[0] > 13) {
+        echo "You were outstanding!";
+    } else {
+        echo "Keep working!";
+    }
 ?>

@@ -13,14 +13,16 @@
 
     $db = new PDO("mysql:dbname=$database;host=$hostname", $username, $password);
 
+    // Insert name into DB
     $name = $_POST["name"];
     $insert = "INSERT INTO `Student` (`StudentName`) VALUES ('$name')";
     $db->query($insert);
 
+    // Create new session for current user
     session_start();
     if (!isset($_SESSION["user"])) {
       $_SESSION["user"] = $name;  // default
-    } 
+    }
     $user = $_SESSION["user"];
 ?>
 
@@ -46,11 +48,7 @@
         <div id="content">
             <nav class="navbar navbar-default" role="navigation">
                 <a class="navbar-brand" href="http://jakcapstone.azurewebsites.net/">SmartAdventure</a>
-<<<<<<< HEAD
                 <a class="navbar-brand navbar-right" href="/endsession.php">Logout <?php print $user?></a>
-=======
-                <a class="navbar-brand navbar-right" href="/endSession.php">Logout <?php print $username?></a>
->>>>>>> b81d7f69912f2389aefcf7b7b0c998ee695c08f6
             </nav>
             
             <!-- Begin contents of the page, to be loaded dynamically -->
