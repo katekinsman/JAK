@@ -37,8 +37,8 @@
         <title>Student Landing</title>
     </head>
 
-    <body style="background-color:#eee;">
-    	<div class="jumbotron" style="text-align:center;">
+    <body style="background-color:#F5D0A9;">
+    	<div class="jumbotron" style="text-align:center; background-color:#F5D0A9">
             <h2>Hello, <?php print $user ?>!</h2>
     		<p>What would you like to do?</p>
 			<div class="btn-group-vertical btn-group-lg">

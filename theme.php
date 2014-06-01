@@ -15,8 +15,8 @@
         <title>Student Landing</title>
     </head>
 
-    <body style="background-color:#eee;">
-    	<div class="jumbotron" style="text-align:center;">
+    <body style="background-color:#F2F5A9;">
+    	<div class="jumbotron" style="text-align:center; background-color:#F2F5A9;">
 			<div style="text-align:center;">
 				<p>Which theme would you like?</p>
 				<div class="btn-group-vertical btn-group-lg">

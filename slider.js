@@ -7,7 +7,7 @@ var SlideCount = $('#storySlider .sliderli').length;
 var SlideWidth = $('#storySlider .sliderli').width();
 var SlideHeight = $('#storySlider .sliderli').height();
 var SliderUlWidth = SlideCount * SlideWidth;
-$('#storySlider').css({ width: SlideWidth, height: SlideHeight });
+$('#storySlider').css({ width: SlideWidth, height: SlideHeight});
 $('#storySlider .sliderul').css({ width: SliderUlWidth, marginLeft: - SlideWidth });
 $('#storySlider .sliderul .sliderli:last-child').prependTo('#storySlider .sliderul');
 var sCurPage = 1;

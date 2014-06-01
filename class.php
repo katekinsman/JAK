@@ -9,11 +9,10 @@
     </ul>
   </div>
 
-<h2>Class Averages Overtime</h2>
-<img src="http://placehold.it/140x100" alt="Generic placeholder thumbnail">
-<img src="http://placehold.it/140x100" alt="Generic placeholder thumbnail">
+<h3>Class Averages Overtime</h3>
+<img src="/Bar Graph.png" alt="Bar graph">
+<img src="/Bar Graph.png" alt="Bar graph"></p>
 
-<h2>Compare The Average Of My Class</h2>
-<img src="http://placehold.it/140x100" alt="Generic placeholder thumbnail">
-<img src="http://placehold.it/140x100" alt="Generic placeholder thumbnail">
-<img src="http://placehold.it/140x100" alt="Generic placeholder thumbnail">
+<h3>Compare The Average Of My Class</h3>
+<img src="/Line Graph.png" alt="Line graph">
+<img src="/Line Graph.png" alt="Line graph">
