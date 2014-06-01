@@ -58,15 +58,29 @@ function moveRight() {
 function checkAnswer(){
     var curInput = "#" + qCurPage + " input:radio[name=answers]:checked";
 
+    // finds theme in URL
+    $.urlParam = function(name){
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        if (results==null){
+           return null;
+        }
+        else{
+           return results[1] || 0;
+        }
+    }
+    
+    var currenttheme = $.urlParam('theme');
+
     $.ajax({
         type: "POST",
         url: "studentAnswer.php",
         dataType: "html",
-        data: {answers: $(curInput).val()},
+        data: {answers: $(curInput).val(), theme: currenttheme},
         success: function(responseHTML){
             $('#answerModal .modal-body').html(responseHTML);
             $('#answerModal').modal({show: true});
-            if(responseHTML == "You were right!"){
+            if(responseHTML == "You were right!Test"){ //doesn't work unless ONLY "You were right!" 
+                //Idea that should work to put here ^ instead: responseHTML.indexOf("You") == 0
                 qMoveRight();
             }
         }
