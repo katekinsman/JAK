@@ -23,8 +23,8 @@
                 </div>
                 <div class="modal-body">
                     Oh no, something has happened! In order to keep moving forward, you must read the story
-                    and answer some questions.<br>
-                    <img src="http://placehold.it/140x100" alt="Generic placeholder thumbnail">
+                    and answer some questions. This is a map of your journey:<br>
+                    <img src="map/TikiMap.png" alt="Map" height="90%" width="90%"/>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Let's Get Started</button>

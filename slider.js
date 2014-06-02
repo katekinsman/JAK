@@ -79,8 +79,7 @@ function checkAnswer(){
         success: function(responseHTML){
             $('#answerModal .modal-body').html(responseHTML);
             $('#answerModal').modal({show: true});
-            if(responseHTML == "You were right!Test"){ //doesn't work unless ONLY "You were right!" 
-                //Idea that should work to put here ^ instead: responseHTML.indexOf("You") == 0
+            if(responseHTML.indexOf("You") == 0){
                 qMoveRight();
             }
         }

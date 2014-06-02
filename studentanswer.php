@@ -24,21 +24,24 @@
 	$result = $correctresult->fetch(PDO::FETCH_BOTH);
 
     // Query for obstacle information
-    //$count = 1;
-    /*$obstaclequery = "SELECT Message, MapImage, Stage FROM `vw_fulljourney`
+
+    // need an outer loop
+
+    $count = 1;
+    $obstaclequery = "SELECT Message, MapImage FROM `vw_fulljourney`
         WHERE `Theme` = '$theme' AND `Stage` = $count";
-    $obstacleresult = $db->query($obstaclequery);
-    $result2 = $obstacleresult->fetch(PDO::FETCH_BOTH);*/
-
-    if($result[0] == 1) { // and count == 1
-        echo "You were right!Test"; //doesn't work unless ONLY "You were right!"
-        //echo $theme;
-        //echo<img src="<?php $result2['MapImage']"> etc., replace 'MapImage' with 'Message' and 'Stage'
-    } // have more conditions to include an image for each stage, both for if you were right and if you were wrong
-        else { // you were wrong
-        echo "Oh no! Try again.";
-    } 
-
-    //$count = $count + 1;
-
+    
+    foreach ($db->query($obstaclequery) as $result2) {
+        if($result[0] == 1) {
+            echo "You were right! Your next task is: ";
+            echo $result2['Message']; 
+            echo "<br>"; ?>
+            <img src="<?= $result2['MapImage'] ?>" height="40%" width="40%"/><?php
+        } else {
+            echo "Oh no! Try answering again.";?>
+            <img src="<?= $result2['MapImage'] ?>" height="40%" width="40%"/><?php
+        } 
+        $count++;
+    }
+  
 ?>
