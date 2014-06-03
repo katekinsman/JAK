@@ -1,4 +1,4 @@
-<body style="background-color:#CED8F6">
+<body style="background-color:#E5DBC1">
 
     <div class="panel panel-default">
         <div class="panel-body">
