@@ -11,7 +11,7 @@
     }
 ?>
 
-    <div style="text-align:center;"><button id="buttonModal" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">What's My Mission?</button></div>
+    <!--<div style="text-align:center;"><button id="buttonModal" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">What's My Mission?</button></div>-->
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -32,6 +32,10 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        $('#myModal').modal({show: true});
+    </script>
 
     <!--Story Slider-->
     <div id="storySlider" class="slider">

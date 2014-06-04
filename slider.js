@@ -1,5 +1,5 @@
 /**
- * Created by Kate on 5/26/14.
+ * Created by Kate on 5/26/14. Also Ashley has hijacked this script to make some edits.
  */
 
 //for avatar
@@ -163,6 +163,7 @@ function qMoveRight() {
                 $('#answerModal').modal({show: true});
             }
         });
+
     }
 };
 
