@@ -2,6 +2,16 @@
  * Created by Kate on 5/26/14.
  */
 
+//for avatar
+var aSlideCount = $('#avatarSlider .sliderli').length;
+var aSlideWidth = $('#avatarSlider .sliderli').width();
+var aSlideHeight = $('#avatarSlider .sliderli').height();
+var aSliderUlWidth = aSlideCount * aSlideWidth;
+$('#avatarSlider').css({ width: aSlideWidth, height: aSlideHeight});
+$('#avatarSlider .sliderul').css({ width: aSliderUlWidth, marginLeft: - aSlideWidth });
+$('#avatarSlider .sliderul .sliderli:last-child').prependTo('#avatarSlider .sliderul');
+var aCurPage = 1;
+
 //for story
 var SlideCount = $('#storySlider .sliderli').length;
 var SlideWidth = $('#storySlider .sliderli').width();
@@ -24,7 +34,38 @@ $('#questionSlider .sliderul .sliderli:last-child').prependTo('#questionSlider .
 var qCurPage = 1;
 $('#questionSlider').toggleClass("hidden");
 
-function moveLeft() {
+function aMoveLeft() {
+    if(aCurPage > 1){
+
+        $('#avatarSlider .sliderul').animate({
+            left: + aSlideWidth
+        }, 200, function () {
+            $('#avatarSlider .sliderul .sliderli:last-child').prependTo('#avatarSlider .sliderul');
+            $('#avatarSlider .sliderul').css('left', '');
+        });
+        aCurPage--;
+    }
+};
+
+function aMoveRight() {
+    if(aCurPage < aSlideCount){
+
+        $('#avatarSlider .sliderul').animate({
+            left: - aSlideWidth
+        }, 200, function () {
+            $('#avatarSlider .sliderul .sliderli:first-child').appendTo('#avatarSlider .sliderul');
+            $('#avatarSlider .sliderul').css('left', '');
+        });
+        aCurPage++;
+    }else{
+        //story has ended. hide story, show questions
+        $('#avatarSlider').toggleClass("hidden");
+        $('#avatarSlider').toggleClass("hidden");
+
+    }
+};
+
+function sMoveLeft() {
     if(sCurPage > 1){
 
         $('#storySlider .sliderul').animate({
@@ -37,7 +78,7 @@ function moveLeft() {
     }
 };
 
-function moveRight() {
+function sMoveRight() {
     if(sCurPage < SlideCount){
 
         $('#storySlider .sliderul').animate({
@@ -139,11 +180,19 @@ $(document).ready(function(){
     });
 
     $('#storySlider a.control_prev').click(function () {
-        moveLeft();
+        sMoveLeft();
     });
 
     $('#storySlider a.control_next').click(function () {
-        moveRight();
+        sMoveRight();
+    });
+
+    $('#avatarSlider a.control_prev').click(function () {
+        aMoveLeft();
+    });
+
+    $('#avatarSlider a.control_next').click(function () {
+        aMoveRight();
     });
 
 
