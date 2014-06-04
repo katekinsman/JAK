@@ -1,35 +1,7 @@
 /**
  * Created by Kate on 5/26/14. Also Ashley has hijacked this script to make some edits.
  */
-//for in-game store
-var gameStoreSlideCount = $('#in-gameStoreSlider .sliderli').length;
-var gameStoreSlideWidth = $('#in-gameStoreSlider .sliderli').width();
-var gameStoreSlideHeight = $('#in-gameStoreSlider .sliderli').height();
-var gameStoreSliderUlWidth = gameStoreSlideCount * gameStoreSlideWidth;
-$('#in-gameStoreSlider').css({ width: gameStoreSlideWidth, height: gameStoreSlideHeight});
-$('#in-gameStoreSlider .sliderul').css({ width: gameStoreSliderUlWidth, marginLeft: - gameStoreSlideWidth });
-$('#in-gameStoreSlider .sliderul .sliderli:last-child').prependTo('#in-gameStoreSlider .sliderul');
-var gameStoreCurPage = 1;
 
-//for in-class store
-var classStoreSlideCount = $('#in-classStoreSlider .sliderli').length;
-var classStoreSlideWidth = $('#in-classStoreSlider .sliderli').width();
-var classStoreSlideHeight = $('#in-classStoreSlider .sliderli').height();
-var classStoreSliderUlWidth = classStoreSlideCount * classStoreSlideWidth;
-$('#in-classStoreSlider').css({ width: classStoreSlideWidth, height: classStoreSlideHeight});
-$('#in-classStoreSlider .sliderul').css({ width: classStoreSliderUlWidth, marginLeft: - classStoreSlideWidth });
-$('#in-classStoreSlider .sliderul .sliderli:last-child').prependTo('#in-classStoreSlider .sliderul');
-var classStoreCurPage = 1;
-
-//for avatar
-var aSlideCount = $('#avatarSlider .sliderli').length;
-var aSlideWidth = $('#avatarSlider .sliderli').width();
-var aSlideHeight = $('#avatarSlider .sliderli').height();
-var aSliderUlWidth = aSlideCount * aSlideWidth;
-$('#avatarSlider').css({ width: aSlideWidth, height: aSlideHeight});
-$('#avatarSlider .sliderul').css({ width: aSliderUlWidth, marginLeft: - aSlideWidth });
-$('#avatarSlider .sliderul .sliderli:last-child').prependTo('#avatarSlider .sliderul');
-var aCurPage = 1;
 
 //for story
 var SlideCount = $('#storySlider .sliderli').length;
@@ -53,101 +25,9 @@ $('#questionSlider .sliderul .sliderli:last-child').prependTo('#questionSlider .
 var qCurPage = 1;
 $('#questionSlider').toggleClass("hidden");
 
-function inClassMoveLeft() {
-    if(classStoreCurPage > 1){
-
-        $('#in-classStoreSlider .sliderul').animate({
-            left: + classStoreSlideWidth
-        }, 200, function () {
-            $('#in-classStoreSlider .sliderul .sliderli:last-child').prependTo('#in-classStoreSlider .sliderul');
-            $('#in-classStoreSlider .sliderul').css('left', '');
-        });
-        classStoreCurPage--;
-    }
-}
-
-function inClassMoveRight() {
-    if(classStoreCurPage < classStoreSlideCount){
-
-        $('#in-classStoreSlider .sliderul').animate({
-            left: - classStoreSlideWidth
-        }, 200, function () {
-            $('#in-classStoreSlider .sliderul .sliderli:first-child').appendTo('#in-classStoreSlider .sliderul');
-            $('#in-classStoreSlider .sliderul').css('left', '');
-        });
-        classStoreCurPage++;
-    }else{
-        //story has ended. hide story, show questions
-        $('#in-classStoreSlider').toggleClass("hidden");
-        $('#in-classStoreSlider').toggleClass("hidden");
-
-    }
-}
-
-function inGameMoveLeft() {
-    if(gameStoreCurPage > 1){
-
-        $('#in-gameStoreSlider .sliderul').animate({
-            left: + gameStoreSlideWidth
-        }, 200, function () {
-            $('#in-gameStoreSlider .sliderul .sliderli:last-child').prependTo('#in-gameStoreSlider .sliderul');
-            $('#in-gameStoreSlider .sliderul').css('left', '');
-        });
-        gameStoreCurPage--;
-    }
-}
-
-function inGameMoveRight() {
-    if(gameStoreCurPage < gameStoreSlideCount){
-
-        $('#in-gameStoreSlider .sliderul').animate({
-            left: - gameStoreSlideWidth
-        }, 200, function () {
-            $('#in-gameStoreSlider .sliderul .sliderli:first-child').appendTo('#in-gameStoreSlider .sliderul');
-            $('#in-gameStoreSlider .sliderul').css('left', '');
-        });
-        gameStoreCurPage++;
-    }else{
-        //story has ended. hide story, show questions
-        $('#in-gameStoreSlider').toggleClass("hidden");
-        $('#in-gameStoreSlider').toggleClass("hidden");
-
-    }
-}
-
-function aMoveLeft() {
-    if(aCurPage > 1){
-
-        $('#avatarSlider .sliderul').animate({
-            left: + aSlideWidth
-        }, 200, function () {
-            $('#avatarSlider .sliderul .sliderli:last-child').prependTo('#avatarSlider .sliderul');
-            $('#avatarSlider .sliderul').css('left', '');
-        });
-        aCurPage--;
-    }
-}
-
-function aMoveRight() {
-    if(aCurPage < aSlideCount){
-
-        $('#avatarSlider .sliderul').animate({
-            left: - aSlideWidth
-        }, 200, function () {
-            $('#avatarSlider .sliderul .sliderli:first-child').appendTo('#avatarSlider .sliderul');
-            $('#avatarSlider .sliderul').css('left', '');
-        });
-        aCurPage++;
-    }else{
-        //story has ended. hide story, show questions
-        $('#avatarSlider').toggleClass("hidden");
-        $('#avatarSlider').toggleClass("hidden");
-    }
-}
 
 function sMoveLeft() {
     if(sCurPage > 1){
-
         $('#storySlider .sliderul').animate({
             left: + SlideWidth
         }, 200, function () {
@@ -160,7 +40,6 @@ function sMoveLeft() {
 
 function sMoveRight() {
     if(sCurPage < SlideCount){
-
         $('#storySlider .sliderul').animate({
             left: - SlideWidth
         }, 200, function () {
@@ -182,7 +61,7 @@ function sMoveRight() {
             else{
                return results[1] || 0;
             }
-        }
+        };
     
         var currenttheme = $.urlParam('theme');
         
@@ -211,7 +90,7 @@ function checkAnswer(){
         else{
            return results[1] || 0;
         }
-    }
+    };
     
     var currenttheme = $.urlParam('theme');
 
@@ -254,7 +133,7 @@ function qMoveRight() {
             else{
                return results[1] || 0;
             }
-        }
+        };
         var currenttheme = $.urlParam('theme');
 
         $.ajax({
@@ -272,13 +151,6 @@ function qMoveRight() {
 
 $(document).ready(function(){
 
-    //debug checkboxes
-//    $('input[type=radio]').change(function(){
-//        $('#1 input[type=radio]').each(function(index){
-//            console.log("" + $(this) + ".prop('checked'):" + $(this).prop("checked"));
-//        });
-//    });
-
     $('#questionSlider a.control_next').click(function () {
         checkAnswer();
     });
@@ -290,30 +162,5 @@ $(document).ready(function(){
     $('#storySlider a.control_next').click(function () {
         sMoveRight();
     });
-
-    $('#avatarSlider a.control_prev').click(function () {
-        aMoveLeft();
-    });
-
-    $('#avatarSlider a.control_next').click(function () {
-        aMoveRight();
-    });
-
-    $('#in-gameStoreSlider a.control_prev').click(function () {
-        inGameMoveLeft();
-    });
-
-    $('#in-gameStoreSlider a.control_next').click(function () {
-        inGameMoveRight();
-    });
-
-    $('#in-classStoreSlider a.control_prev').click(function () {
-        inClassMoveLeft();
-    });
-
-    $('#in-classStoreSlider a.control_next').click(function () {
-        inClassMoveRight();
-    });
-
 
 });

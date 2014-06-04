@@ -32,6 +32,7 @@
             </div>
         </div>
     </div>
+</div>
 
     <script type="text/javascript">
         $('#myModal').modal({show: true});
@@ -40,7 +41,7 @@
     <!--Story Slider-->
     <div id="storySlider" class="slider">
 
-        <a href="#" class="control_prev"><img src="leftarrow.png"></a>
+        <a href="#" class="control_prev"><img src="leftArrow.png"></a>
 
         <ul class="sliderul">
             <li class="sliderli">
@@ -64,7 +65,7 @@
             <?php } ?>
         </ul>
 
-        <a href="#" class="control_next"><img src="rightarrow.png"></a>
+        <a href="#" class="control_next"><img src="rightArrow.png"></a>
 
     </div>
 
@@ -102,7 +103,7 @@
             } ?>
         </ul>
 
-        <a href="#questionSlider" id="clickarrow" class="control_next"><img src="rightarrow.png"></a>
+        <a href="#questionSlider" id="clickarrow" class="control_next"><img src="rightArrow.png"></a>
 
     </div>
 

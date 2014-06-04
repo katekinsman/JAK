@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1073396162">
+    <data-source source="LOCAL" name="capstone database" uuid="60312435-7156-4ee8-bec7-933eaad54aa3">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://us-cdbr-azure-east-a.cloudapp.net:3306/capstonemysql</jdbc-url>
+      <user-name>b23933fcb8ccea</user-name>
+      <user-password>df92df9edf9ddf9bdfcbdfc9df9cdf9e</user-password>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+      </driver-properties>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

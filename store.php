@@ -13,232 +13,246 @@
             <div class="tab-content">
 
                 <div class="tab-pane active" id="in-game">
-                    <div id="in-gameStoreSlider" class="slider">
+                    <div id="in-game-carousel" class="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#in-game-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#in-game-carousel" data-slide-to="1"></li>
+                            <li data-target="#in-game-carousel" data-slide-to="2"></li>
+                        </ol>
 
-                        <a href="#in-gameStoreSlider" class="control_prev"><img src="leftarrow.png"></a>
-                        <ul class="sliderul">
-                            <li class="sliderli">
-                                <section class="page">
-
-                                    <div class="panel panel-default">
-                                        <table class="table">
-                                            <tr>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Shirt.png"
-                                                             alt="Shirt" width="30%" height="30%">
-                                                    </a></td>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Green Shirt.png"
-                                                             alt="Shirt" width="30%" height="30%">
-                                                    </a></td>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Grey Shirt.png"
-                                                             alt="Shirt" width="30%" height="30%">
-                                                    </a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Shirt.png"
-                                                             alt="Shirt" width="30%" height="30%">
-                                                    </a></td>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Green Shirt.png"
-                                                             alt="Shirt" width="30%" height="30%">
-                                                    </a></td>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Grey Shirt.png"
-                                                             alt="Shirt" width="30%" height="30%">
-                                                    </a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Shirt.png"
-                                                             alt="Shirt" width="30%" height="30%">
-                                                    </a></td>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Green Shirt.png"
-                                                             alt="Shirt" width="30%" height="30%">
-                                                    </a></td>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Grey Shirt.png"
-                                                             alt="Shirt" width="30%" height="30%">
-                                                    </a></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </section>
-                            </li>
-                            <li class="sliderli">
-                                <div class="page">
-                                    <div class="panel panel-default">
-                                        <table class="table">
-                                            <tr>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Green Pants.png"
-                                                             alt="Shirt" width="25%" height="25%">
-                                                    </a></td>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Orange Pants.png"
-                                                             alt="Shirt" width="25%" height="25%">
-                                                    </a></td>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/White Pants.png"
-                                                             alt="Shirt" width="25%" height="25%">
-                                                    </a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Green Pants.png"
-                                                             alt="Shirt" width="25%" height="25%">
-                                                    </a></td>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Orange Pants.png"
-                                                             alt="Shirt" width="25%" height="25%">
-                                                    </a></td>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/White Pants.png"
-                                                             alt="Shirt" width="25%" height="25%">
-                                                    </a></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Green Pants.png"
-                                                             alt="Shirt" width="25%" height="25%">
-                                                    </a></td>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/Orange Pants.png"
-                                                             alt="Shirt" width="25%" height="25%">
-                                                    </a></td>
-                                                <td><a href="#" class="thumbnail">
-                                                        <img src="/avatarimages/White Pants.png"
-                                                             alt="Shirt" width="25%" height="25%">
-                                                    </a></td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="panel panel-default">
+                                    <table class="table">
+                                        <tr>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Shirt.png"
+                                                         alt="Shirt" width="30%" height="30%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Green Shirt.png"
+                                                         alt="Shirt" width="30%" height="30%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Grey Shirt.png"
+                                                         alt="Shirt" width="30%" height="30%">
+                                                </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Shirt.png"
+                                                         alt="Shirt" width="30%" height="30%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Green Shirt.png"
+                                                         alt="Shirt" width="30%" height="30%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Grey Shirt.png"
+                                                         alt="Shirt" width="30%" height="30%">
+                                                </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Shirt.png"
+                                                         alt="Shirt" width="30%" height="30%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Green Shirt.png"
+                                                         alt="Shirt" width="30%" height="30%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Grey Shirt.png"
+                                                         alt="Shirt" width="30%" height="30%">
+                                                </a></td>
+                                        </tr>
+                                    </table>
                                 </div>
-                            </li>
-                        </ul>
-                        <a href="#in-gameStoreSlider" class="control_next"><img src="rightarrow.png"></a>
+                            </div>
+                            <div class="item">
+                                <div class="panel panel-default">
+                                    <table class="table">
+                                        <tr>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Green Pants.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Orange Pants.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/White Pants.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Green Pants.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Orange Pants.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/White Pants.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Green Pants.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Orange Pants.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/White Pants.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
 
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#in-game-carousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#in-game-carousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
                     </div>
                 </div>
 
                 <div class="tab-pane" id="in-class">
-                    <div id="in-classStoreSlider" class="slider">
+                    <div id="in-class-carousel" class="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#in-class-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#in-class-carousel" data-slide-to="1"></li>
+                            <li data-target="#in-class-carousel" data-slide-to="2"></li>
+                        </ol>
 
-                        <a href="#in-classStoreSlider" class="control_prev"><img src="leftarrow.png"></a>
-                        <ul class="sliderul">
-                                <li class="sliderli">
-                                    <section class="page">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="panel panel-default">
+                                    <table class="table">
+                                        <tr>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Pizza.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Pizza.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Pizza.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Playground.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Playground.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Playground.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Movie.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Movie.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Movie.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="panel panel-default">
+                                    <table class="table">
+                                        <tr>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Movie.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Movie.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Movie.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Pizza.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Pizza.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Pizza.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Playground.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Playground.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                            <td><a href="#" class="thumbnail">
+                                                    <img src="/avatarimages/Playground.png"
+                                                         alt="Shirt" width="25%" height="25%">
+                                                </a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
 
-                                        <div class="panel panel-default">
-
-                                            <table class="table">
-                                                <tr>
-                                                     <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Pizza.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                    <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Pizza.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                    <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Pizza.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                </tr>
-                                                <tr>
-                                                     <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Playground.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                    <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Playground.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                    <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Playground.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                </tr>
-                                                <tr>
-                                                     <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Movie.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                    <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Movie.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                    <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Movie.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </section>
-                                </li>
-
-                                <li class="sliderli">
-                                    <section class="page">
-                                        <div class="panel panel-default">
-                                            <table class="table">
-                                                <tr>
-                                                 <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Movie.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                    <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Movie.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                    <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Movie.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                </tr>
-                                                <tr>
-                                                     <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Pizza.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                    <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Pizza.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                    <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Pizza.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                </tr>
-                                                <tr>
-                                                     <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Playground.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                    <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Playground.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                    <td><a href="#" class="thumbnail">
-                                                         <img src="/avatarimages/Playground.png"
-                                                         alt="Shirt" width="25%" height="25%">
-                                                      </a></td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </section>
-                                </li>
-                            </ul>
-                        <a href="#in-classStoreSlider" class="control_next"><img src="rightarrow.png"></a>
-
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#in-class-carousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#in-class-carousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </body>
+
+<!-- Javascript file for slider -->
+<script src="slider.js" type="text/javascript"></script>
