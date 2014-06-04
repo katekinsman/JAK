@@ -1,12 +1,11 @@
 <?php
 
-    $cur_page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 'student';
+    $cur_page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 'studentLanding';
     $nav = json_decode(file_get_contents("site_contents.json"), true);
     $pageheader = $cur_page;
     $pagetitle = 'Student Page';
 
     // MySQl Connection
-
     $username = 'b23933fcb8ccea';
     $password = '8471ac64';
     $hostname = 'us-cdbr-azure-east-a.cloudapp.net:3306'; 
@@ -14,8 +13,14 @@
 
     $db = new PDO("mysql:dbname=$database;host=$hostname", $username, $password);
 
+    // Insert name into DB
+    $name = $_POST["name"];
+    $insert = "INSERT INTO `Student` (`StudentName`) VALUES ('$name')";
+    $db->query($insert);
+
     $theme = '';
 
+    // Create new session for current user
     session_start();
     if (!isset($_SESSION["user"])) {
       $_SESSION["user"] = $name;  // default
@@ -58,28 +63,34 @@
         <title><?= $pagetitle ?></title>
     </head>
 
-    <body>            
+    <body style="background-color:#E5DBC1">
         <div id="content">
             <!-- Begin contents of the page, to be loaded dynamically -->
-                <nav class="navbar navbar-default" role="navigation">
-                    <div class="container-fluid">
+            <!--Top Navbar-->
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
                     <p class="navbar-brand">SmartAdventure</p>
-                    <ul class="nav navbar-nav" id="nav">
-                        <?php foreach ($nav['student'] as $pageid => $title) { ?>
-                            <li <?= $cur_page == $pageid ? 'class="current"' : ''; ?>>
-                                <a href="studentTemplate.php?page=<?= $pageid ?>"><?= $title ?></a>
-                            </li>
-                        <?php } ?>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><p class="navbar-text">Coins: <span class="badge"><?php print $coins[0]; ?></span></p></li>
-                        <li><a href="/endSession.php">Logout <?php print $user?></a></li>
-                    </ul>
-                 </div>
-                </nav>
 
+                    <?php if($cur_page != 'play'){ ?>
+
+                        <ul class="nav navbar-nav" id="nav">
+                            <?php foreach ($nav['student'] as $pageid => $title) { ?>
+                                <li <?= $cur_page == $pageid ? 'class="active"' : ''; ?>>
+                                    <a href="studenttemplate.php?page=<?= $pageid ?>"><?= $title ?></a>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><p class="navbar-text">Coins: <span class="badge"><?php print $coins[0]; ?></span></p></li>
+                            <li><a href="/endSession.php">Logout <?php print $user?></a></li>
+                        </ul>
+                     <?php } ?>
+
+                </div>
+            </nav>
+
+            <!--Actual page content-->
             <?php
-                global $cur_page;
                 $key = array_search($pageheader, $nav);
                 include "$cur_page.php";
             ?>
@@ -87,7 +98,12 @@
         </div>
         <div id="push"></div>
         <div id="footer">
-            <footer><p>JAK Capstone</p></footer>
+            <!--footer-->
+            <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav"><li><a href="#">JAK Capstone</a></li></ul>
+                </div>
+            </nav>
         </div>
 
         <script type="text/javascript">
@@ -98,6 +114,8 @@
 
             $('.carousel').carousel();
         </script>
+
+
 
     </body>
 

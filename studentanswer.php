@@ -16,30 +16,33 @@
 
     $theme = $_REQUEST["theme"];
 
-	$studentanswer = $_POST['answers'];
-	$db->query("CALL capstonemysql.new_selection('$user', '$studentanswer')");
+    $stage = $_POST["stage"];
 
-	$correct = "SELECT Correct FROM `vw_fullassessment` WHERE AnswerValue = '$studentanswer'";
-	$correctresult = $db->query($correct);
-	$result = $correctresult->fetch(PDO::FETCH_BOTH);
+    $result;
+    if($stage > 1){
+        $studentAnswer = $_POST['answers'];
+        $db->query("CALL capstonemysql.new_selection('$user', '$studentAnswer')");
 
+        $correct = "SELECT Correct FROM `vw_fullassessment` WHERE AnswerValue = '$studentAnswer'";
+        $correctResult = $db->query($correct);
+        $result = $correctResult->fetch(PDO::FETCH_BOTH);
+    }
     // Query for obstacle information
+    $obstacleQuery = "SELECT Message, MapImage FROM `vw_fulljourney`
+        WHERE `Theme` = '$theme' AND `Stage` = '$stage'";
 
-    $count = 2;
-    $obstaclequery = "SELECT Message, MapImage FROM `vw_fulljourney`
-        WHERE `Theme` = '$theme' AND `Stage` = $count";
-    
-    foreach ($db->query($obstaclequery) as $result2) {
+    $obstacleResult = $db->query($obstacleQuery);
+    $result2 = $obstacleResult->fetch(PDO::FETCH_BOTH);
+    if($stage == 1){
+        echo "<p>Oh no! There's something in the way! Answer the question correctly to " . $result2['Message']
+            . ".</p><br> <img src='" . $result2['MapImage'] . "' height='40%' width='40%' style='margin: 0 auto 0 auto'/>";
+    }else{
         if($result[0] == 1) {
-            echo "You were right! Your next task is: ";
-            echo $result2['Message']; 
-            echo "<br>"; ?>
-            <img src="<?= $result2['MapImage'] ?>" height="40%" width="40%"/><?php
-        } else {
-            echo "Oh no! Try answering again.";?>
-            <img src="<?= $result2['MapImage'] ?>" height="40%" width="40%"/><?php
-        } 
-        $count++;
+            echo "<h1>You were right!</h1> <br> <p>Oh no! There's something in the way! Answer the question correctly to "
+                . $result2['Message'] . ".</p><br> <img src='" . $result2['MapImage'] . "' height='40%' width='40%' style='margin: 0 auto 0 auto'/>";
+        }else {
+            echo "<p>Oh no! Try answering again.</p>";
+        }
     }
   
 ?>

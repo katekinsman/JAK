@@ -1,17 +1,24 @@
-
 .panel{
     margin: 3em;
 }
+.modal-body, .modal-footer{
+    text-align: center;
+}
+.modal-body img{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
 table{
     padding: 2em;
-    height: 5em;
-    width: 10em;
 }
 button{
     margin: auto;
 }
 footer{
     text-align: center;
+}
+.container-fluid p{
+    margin-bottom: 0;
 }
 
 /*slider*/
@@ -68,30 +75,6 @@ a.control_next {
     text-align: center;
 }
 /*slider over */
-
-
-/*store & avatar slider*/
-#avatarSlider.slider, #inGameStoreSlider.slider, #inClassStoreSlider.slider{
-    margin: 5em auto 0 auto;
-    height: 20em;
-    width: 70em;
-}
-#avatarSlider .sliderul, #inGameStoreSlider .sliderul, #inClassStoreSlider .sliderul{
-    height: 35em;
-}
-
-#avatarSlider .sliderli, #inGameStoreSlider .sliderli, #inClassStoreSlider .sliderli{
-    padding-left: 6em;
-    width: 70em;
-    height: auto;
-}
-
-#avatarSlider.page, #inGameStoreSlider.page, #inClassStoreSlider.page{
-    height: 35em;
-    width: 42em;
-}
-/*store & avatar slider over */
-
 
 .title{
     margin-top: 3em

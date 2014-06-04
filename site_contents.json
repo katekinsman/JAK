@@ -13,6 +13,7 @@
         "theme": "Play",
         "avatar": "My Avatar",
         "store": "Store"
-    }
+    },
+    "studentLanding": "StudentLanding.php"
 
 }

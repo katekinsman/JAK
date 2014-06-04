@@ -28,10 +28,10 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap.min.css">
@@ -75,7 +75,12 @@
         </div>
         <div id="push"></div>
         <div id="footer">
-            <footer><p>JAK Capstone</p></footer>
+            <!--footer-->
+            <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav"><li><a href="#">JAK Capstone</a></li></ul>
+                </div>
+            </nav>
         </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -90,5 +95,3 @@
         </script>
 
     </body>
-
-</html>

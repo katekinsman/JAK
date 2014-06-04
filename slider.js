@@ -66,9 +66,10 @@ function sMoveRight() {
         var currenttheme = $.urlParam('theme');
         
         $.ajax({
-            url: "studentbeginquestions.php",
+            type: 'POST',
+            url: "studentanswer.php",
             dataType: "html",
-            data: {theme: currenttheme},
+            data: {theme: currenttheme, stage: qCurPage},
             success: function(responseHTML){
                 $('#answerModal .modal-body').html(responseHTML);
                 $('#answerModal').modal({show: true});
@@ -93,16 +94,16 @@ function checkAnswer(){
     };
     
     var currenttheme = $.urlParam('theme');
-
+    var stage = qCurPage + 1;
     $.ajax({
         type: "POST",
         url: "studentAnswer.php",
         dataType: "html",
-        data: {answers: $(curInput).val(), theme: currenttheme},
+        data: {answers: $(curInput).val(), theme: currenttheme, stage: stage},
         success: function(responseHTML){
             $('#answerModal .modal-body').html(responseHTML);
             $('#answerModal').modal({show: true});
-            if(responseHTML.indexOf("You") == 0){
+            if(responseHTML.indexOf("You") == 4){
                 qMoveRight();
             }
         }
@@ -140,11 +141,16 @@ function qMoveRight() {
             url: "studentCoins.php",
             dataType: "html",
             data: {theme: currenttheme},
+            async: false,
             success: function(responseHTML){
                 $('#answerModal .modal-body').html(responseHTML);
                 $('#answerModal').modal({show: true});
+                $('#answerModal').on('hide.bs.modal', function (e) {
+                    window.location.replace("/studenttemplate.php");
+                });
             }
         });
+
 
     }
 }

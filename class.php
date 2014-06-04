@@ -1,5 +1,5 @@
 <h3>Select a class:</h3>
-<div class="btn-group" style="text-align:left;">
+<div class="btn-group" style="text-align:center;">
   <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Class <span class="caret"></span></button>
   <ul class="dropdown-menu">
     <li><a href="#" id="action-1">Class 1</a></li>
