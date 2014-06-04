@@ -8,24 +8,20 @@
 </div>
 
 <div id="analytics1">
-	<h2>Class 1</h2>
+	<h1>Class 1</h1>
 	<h3>Class Averages Overtime</h3>
 	<img src="/Bar Graph.png" alt="Bar graph">
-	<img src="/Bar Graph.png" alt="Bar graph"></p>
 
 	<h3>Compare The Average Of My Class</h3>
-	<img src="/Line Graph.png" alt="Line graph">
 	<img src="/Line Graph.png" alt="Line graph">
 </div>
 
 <div id="analytics2">
-	<h2>Class 2</h2>
+	<h1>Class 2</h1>
 	<h3>Class Averages Overtime</h3>
 	<img src="/Bar Graph.png" alt="Bar graph">
-	<img src="/Bar Graph.png" alt="Bar graph"></p>
 
 	<h3>Compare The Average Of My Class</h3>
-	<img src="/Line Graph.png" alt="Line graph">
 	<img src="/Line Graph.png" alt="Line graph">
 </div>
 
