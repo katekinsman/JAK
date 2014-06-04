@@ -1,18 +1,47 @@
 <h3>Select a class:</h3>
-  <div class="btn-group" style="text-align:left;">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-      Class<span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Class 1</a></li>
-      <li><a href="#">Class 2</a></li>
-    </ul>
-  </div>
+<div class="btn-group" style="text-align:left;">
+  <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Class <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#" id="action-1">Class 1</a></li>
+    <li><a href="#" id="action-2">Class 2</a></li>
+  </ul>
+</div>
 
-<h3>Class Averages Overtime</h3>
-<img src="/Bar Graph.png" alt="Bar graph">
-<img src="/Bar Graph.png" alt="Bar graph"></p>
+<div id="analytics1">
+	<h2>Class 1</h2>
+	<h3>Class Averages Overtime</h3>
+	<img src="/Bar Graph.png" alt="Bar graph">
+	<img src="/Bar Graph.png" alt="Bar graph"></p>
 
-<h3>Compare The Average Of My Class</h3>
-<img src="/Line Graph.png" alt="Line graph">
-<img src="/Line Graph.png" alt="Line graph">
+	<h3>Compare The Average Of My Class</h3>
+	<img src="/Line Graph.png" alt="Line graph">
+	<img src="/Line Graph.png" alt="Line graph">
+</div>
+
+<div id="analytics2">
+	<h2>Class 2</h2>
+	<h3>Class Averages Overtime</h3>
+	<img src="/Bar Graph.png" alt="Bar graph">
+	<img src="/Bar Graph.png" alt="Bar graph"></p>
+
+	<h3>Compare The Average Of My Class</h3>
+	<img src="/Line Graph.png" alt="Line graph">
+	<img src="/Line Graph.png" alt="Line graph">
+</div>
+
+<script type="text/javascript">
+	$('#analytics1').hide();
+	$('#analytics2').hide();
+
+	$("#action-1").click(function(e){
+		$('#analytics1').show();
+		$('#analytics2').hide();
+		e.preventDefault();
+	});
+
+	$("#action-2").click(function(e){
+		$('#analytics2').show();
+		$('#analytics1').hide();
+		e.preventDefault();
+	});
+</script>

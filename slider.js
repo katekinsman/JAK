@@ -182,7 +182,7 @@ function sMoveRight() {
             else{
                return results[1] || 0;
             }
-        };
+        }
     
         var currenttheme = $.urlParam('theme');
         

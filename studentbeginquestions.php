@@ -10,7 +10,7 @@
 
     session_start();
     if (!isset($_SESSION["user"])) {
-        $_SESSION["user"] = $name;  // default
+      $_SESSION["user"] = $name;  // default
     } 
     $user = $_SESSION["user"];
 
@@ -25,21 +25,14 @@
 
     // Query for obstacle information
 
-    $count = 2;
     $obstaclequery = "SELECT Message, MapImage FROM `vw_fulljourney`
-        WHERE `Theme` = '$theme' AND `Stage` = $count";
+        WHERE `Theme` = '$theme' AND `Stage` = 1";
     
     foreach ($db->query($obstaclequery) as $result2) {
-        if($result[0] == 1) {
-            echo "You were right! Your next task is: ";
-            echo $result2['Message']; 
-            echo "<br>"; ?>
-            <img src="<?= $result2['MapImage'] ?>" height="40%" width="40%"/><?php
-        } else {
-            echo "Oh no! Try answering again.";?>
-            <img src="<?= $result2['MapImage'] ?>" height="40%" width="40%"/><?php
-        } 
-        $count++;
+        echo "Now that you've read the story, your next task is: ";
+        echo $result2['Message']; 
+        echo "<br>"; ?>
+        <img src="<?= $result2['MapImage'] ?>" height="40%" width="40%"/><?php
     }
   
 ?>
