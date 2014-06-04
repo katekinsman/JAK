@@ -61,7 +61,6 @@ function aMoveRight() {
         //story has ended. hide story, show questions
         $('#avatarSlider').toggleClass("hidden");
         $('#avatarSlider').toggleClass("hidden");
-
     }
 };
 
@@ -92,6 +91,29 @@ function sMoveRight() {
         //story has ended. hide story, show questions
         $('#storySlider').toggleClass("hidden");
         $('#questionSlider').toggleClass("hidden");
+
+        // finds theme in URL
+        $.urlParam = function(name){
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (results==null){
+               return null;
+            }
+            else{
+               return results[1] || 0;
+            }
+        }
+    
+        var currenttheme = $.urlParam('theme');
+        
+        $.ajax({
+            url: "studentbeginquestions.php",
+            dataType: "html",
+            data: {theme: currenttheme},
+            success: function(responseHTML){
+                $('#answerModal .modal-body').html(responseHTML);
+                $('#answerModal').modal({show: true});
+            }
+        });
 
     }
 };
