@@ -24,7 +24,7 @@
 
             <div id="avatarSlider" class="slider">
 
-                <a href="#" class="control_prev"><img src="leftarrow.png"></a>
+                <a href="#avatarSlider" class="control_prev"><img src="leftarrow.png"></a>
 
                 <ul class="sliderul">
                     <li class="sliderli">
@@ -75,8 +75,9 @@
                             </table>
                         </section>
                     </li>
-                    <li class="page">
-                        <table class="table">
+                    <li class="sliderli">
+                        <section class="page">
+                            <table class="table">
                             <tr>
                                 <td><a href="#" class="thumbnail">
                                         <img src="/avatarimages/Green Pants.png"
@@ -120,9 +121,10 @@
                                     </a></td>
                             </tr>
                         </table>
+                        </section>
                     </li>
                 </ul>
-                <a href="#" class="control_next"><img src="rightarrow.png"></a>
+                <a href="#avatarSlider" class="control_next"><img src="rightarrow.png"></a>
             </div>
 
         </div>

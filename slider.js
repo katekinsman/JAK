@@ -1,6 +1,25 @@
 /**
  * Created by Kate on 5/26/14. Also Ashley has hijacked this script to make some edits.
  */
+//for in-game store
+var gameStoreSlideCount = $('#in-gameStoreSlider .sliderli').length;
+var gameStoreSlideWidth = $('#in-gameStoreSlider .sliderli').width();
+var gameStoreSlideHeight = $('#in-gameStoreSlider .sliderli').height();
+var gameStoreSliderUlWidth = gameStoreSlideCount * gameStoreSlideWidth;
+$('#in-gameStoreSlider').css({ width: gameStoreSlideWidth, height: gameStoreSlideHeight});
+$('#in-gameStoreSlider .sliderul').css({ width: gameStoreSliderUlWidth, marginLeft: - gameStoreSlideWidth });
+$('#in-gameStoreSlider .sliderul .sliderli:last-child').prependTo('#in-gameStoreSlider .sliderul');
+var gameStoreCurPage = 1;
+
+//for in-class store
+var classStoreSlideCount = $('#in-classStoreSlider .sliderli').length;
+var classStoreSlideWidth = $('#in-classStoreSlider .sliderli').width();
+var classStoreSlideHeight = $('#in-classStoreSlider .sliderli').height();
+var classStoreSliderUlWidth = classStoreSlideCount * classStoreSlideWidth;
+$('#in-classStoreSlider').css({ width: classStoreSlideWidth, height: classStoreSlideHeight});
+$('#in-classStoreSlider .sliderul').css({ width: classStoreSliderUlWidth, marginLeft: - classStoreSlideWidth });
+$('#in-classStoreSlider .sliderul .sliderli:last-child').prependTo('#in-classStoreSlider .sliderul');
+var classStoreCurPage = 1;
 
 //for avatar
 var aSlideCount = $('#avatarSlider .sliderli').length;
@@ -34,6 +53,68 @@ $('#questionSlider .sliderul .sliderli:last-child').prependTo('#questionSlider .
 var qCurPage = 1;
 $('#questionSlider').toggleClass("hidden");
 
+function inClassMoveLeft() {
+    if(classStoreCurPage > 1){
+
+        $('#in-classStoreSlider .sliderul').animate({
+            left: + classStoreSlideWidth
+        }, 200, function () {
+            $('#in-classStoreSlider .sliderul .sliderli:last-child').prependTo('#in-classStoreSlider .sliderul');
+            $('#in-classStoreSlider .sliderul').css('left', '');
+        });
+        classStoreCurPage--;
+    }
+}
+
+function inClassMoveRight() {
+    if(classStoreCurPage < classStoreSlideCount){
+
+        $('#in-classStoreSlider .sliderul').animate({
+            left: - classStoreSlideWidth
+        }, 200, function () {
+            $('#in-classStoreSlider .sliderul .sliderli:first-child').appendTo('#in-classStoreSlider .sliderul');
+            $('#in-classStoreSlider .sliderul').css('left', '');
+        });
+        classStoreCurPage++;
+    }else{
+        //story has ended. hide story, show questions
+        $('#in-classStoreSlider').toggleClass("hidden");
+        $('#in-classStoreSlider').toggleClass("hidden");
+
+    }
+}
+
+function inGameMoveLeft() {
+    if(gameStoreCurPage > 1){
+
+        $('#in-gameStoreSlider .sliderul').animate({
+            left: + gameStoreSlideWidth
+        }, 200, function () {
+            $('#in-gameStoreSlider .sliderul .sliderli:last-child').prependTo('#in-gameStoreSlider .sliderul');
+            $('#in-gameStoreSlider .sliderul').css('left', '');
+        });
+        gameStoreCurPage--;
+    }
+}
+
+function inGameMoveRight() {
+    if(gameStoreCurPage < gameStoreSlideCount){
+
+        $('#in-gameStoreSlider .sliderul').animate({
+            left: - gameStoreSlideWidth
+        }, 200, function () {
+            $('#in-gameStoreSlider .sliderul .sliderli:first-child').appendTo('#in-gameStoreSlider .sliderul');
+            $('#in-gameStoreSlider .sliderul').css('left', '');
+        });
+        gameStoreCurPage++;
+    }else{
+        //story has ended. hide story, show questions
+        $('#in-gameStoreSlider').toggleClass("hidden");
+        $('#in-gameStoreSlider').toggleClass("hidden");
+
+    }
+}
+
 function aMoveLeft() {
     if(aCurPage > 1){
 
@@ -45,7 +126,7 @@ function aMoveLeft() {
         });
         aCurPage--;
     }
-};
+}
 
 function aMoveRight() {
     if(aCurPage < aSlideCount){
@@ -61,9 +142,8 @@ function aMoveRight() {
         //story has ended. hide story, show questions
         $('#avatarSlider').toggleClass("hidden");
         $('#avatarSlider').toggleClass("hidden");
-
     }
-};
+}
 
 function sMoveLeft() {
     if(sCurPage > 1){
@@ -76,7 +156,7 @@ function sMoveLeft() {
         });
         sCurPage--;
     }
-};
+}
 
 function sMoveRight() {
     if(sCurPage < SlideCount){
@@ -93,8 +173,31 @@ function sMoveRight() {
         $('#storySlider').toggleClass("hidden");
         $('#questionSlider').toggleClass("hidden");
 
+        // finds theme in URL
+        $.urlParam = function(name){
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (results==null){
+               return null;
+            }
+            else{
+               return results[1] || 0;
+            }
+        };
+    
+        var currenttheme = $.urlParam('theme');
+        
+        $.ajax({
+            url: "studentbeginquestions.php",
+            dataType: "html",
+            data: {theme: currenttheme},
+            success: function(responseHTML){
+                $('#answerModal .modal-body').html(responseHTML);
+                $('#answerModal').modal({show: true});
+            }
+        });
+
     }
-};
+}
 
 function checkAnswer(){
     var curInput = "#" + qCurPage + " input:radio[name=answers]:checked";
@@ -165,7 +268,7 @@ function qMoveRight() {
         });
 
     }
-};
+}
 
 $(document).ready(function(){
 
@@ -194,6 +297,22 @@ $(document).ready(function(){
 
     $('#avatarSlider a.control_next').click(function () {
         aMoveRight();
+    });
+
+    $('#in-gameStoreSlider a.control_prev').click(function () {
+        inGameMoveLeft();
+    });
+
+    $('#in-gameStoreSlider a.control_next').click(function () {
+        inGameMoveRight();
+    });
+
+    $('#in-classStoreSlider a.control_prev').click(function () {
+        inClassMoveLeft();
+    });
+
+    $('#in-classStoreSlider a.control_next').click(function () {
+        inClassMoveRight();
     });
 
 
