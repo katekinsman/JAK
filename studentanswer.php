@@ -27,6 +27,7 @@
         $correctResult = $db->query($correct);
         $result = $correctResult->fetch(PDO::FETCH_BOTH);
     }
+
     // Query for obstacle information
     $obstacleQuery = "SELECT Message, MapImage FROM `vw_fulljourney`
         WHERE `Theme` = '$theme' AND `Stage` = '$stage'";
@@ -41,8 +42,7 @@
             echo "<h1>You were right!</h1> <br> <p>Oh no! There's something in the way! Answer the question correctly to "
                 . $result2['Message'] . ".</p><br> <img src='" . $result2['MapImage'] . "' height='40%' width='40%' style='margin: 0 auto 0 auto'/>";
         }else {
-            echo "<p>Oh no! Try answering again.</p>";
+            echo "<p>Try answering again.</p>";
         }
     }
-  
 ?>
